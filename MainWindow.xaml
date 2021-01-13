@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WHeditor"
         mc:Ignorable="d"
-        Title="HelloThere" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-    <Grid>
-        
-    </Grid>
+        Title="HelloThere"  
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" 
+        WindowStyle="ThreeDBorderWindow" 
+        MinWidth="1024" 
+        MinHeight="720" Height="720" Width="1024"
+        Loaded="Window_Loaded"
+        >
+
+    <DockPanel>
+        <Frame Name="ParentFrame"/>
+    </DockPanel>
+
 </Window>

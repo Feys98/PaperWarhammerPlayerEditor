@@ -30,7 +30,6 @@ namespace WHeditor
 
             return (int)(minimumValue + randomValueInRange);
         }
-
         public static int K_Ten()
         {
             return RollBetween(1, 10);
@@ -43,6 +42,5 @@ namespace WHeditor
         {
             return RollBetween(1, 20);
         }
-
     }
 }

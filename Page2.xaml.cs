@@ -16,20 +16,13 @@ using System.Windows.Shapes;
 namespace WHeditor
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// Logika interakcji dla klasy Page2.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Page2 : Page
     {
-        public MainWindow()
+        public Page2()
         {
             InitializeComponent();
         }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            App.ParentWindowRef = this;
-            this.ParentFrame.Navigate(new MainMenu());
-        }
     }
 }
-//test 1
