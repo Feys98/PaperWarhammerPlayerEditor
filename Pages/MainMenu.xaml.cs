@@ -25,9 +25,21 @@ namespace WHeditor
             InitializeComponent();
         }
 
-        private void MainMenuStartButton(object sender, RoutedEventArgs e)
+        private void MainMenuButtonNewPlayer_Click(object sender, RoutedEventArgs e)
         {
-            App.ParentWindowRef.ParentFrame.Navigate(new Page2());
+
+            App.ParentWindowRef.ParentFrame.Navigate(new RaseChoice());
+           //TODO
         }
+        private void MainMenuButtonLoadPlayer_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO
+        }
+
+        private void MainMenuButtonExit_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Shutdown();
+        }
+
     }
 }

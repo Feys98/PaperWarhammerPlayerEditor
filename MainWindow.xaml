@@ -15,7 +15,7 @@
         >
 
     <DockPanel>
-        <Frame Name="ParentFrame"/>
+        <Frame Name="ParentFrame" NavigationUIVisibility="Hidden" Background="#FFEF8181"/>
     </DockPanel>
 
 </Window>

@@ -16,13 +16,18 @@ using System.Windows.Shapes;
 namespace WHeditor
 {
     /// <summary>
-    /// Logika interakcji dla klasy Page2.xaml
+    /// Logika interakcji dla klasy RaseChoice.xaml
     /// </summary>
-    public partial class Page2 : Page
+    public partial class RaseChoice : Page
     {
-        public Page2()
+        public RaseChoice()
         {
             InitializeComponent();
+        }
+
+        private void TEST(object sender, RoutedEventArgs e)
+        {
+            //App.ParentWindowRef.ParentFrame.Navigate(new //TODONEWPAGE());
         }
     }
 }
