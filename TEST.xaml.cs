@@ -16,24 +16,13 @@ using System.Windows.Shapes;
 namespace WHeditor
 {
     /// <summary>
-    /// Logika interakcji dla klasy RaseChoice.xaml
+    /// Logika interakcji dla klasy TEST.xaml
     /// </summary>
-    public partial class RaseChoice : Page
+    public partial class TEST : Page
     {
-        public RaseChoice()
+        public TEST()
         {
             InitializeComponent();
-        }
-
-
-        private void sth(object sender, MouseButtonEventArgs e)
-        {
-            App.ParentWindowRef.ParentFrame.Navigate(new TEST());
-        }
-
-        private void RaceChoiceImgHumanIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            App.ParentWindowRef.ParentFrame.Navigate(new TEST());
         }
     }
 }
