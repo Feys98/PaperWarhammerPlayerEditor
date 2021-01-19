@@ -25,15 +25,16 @@ namespace WHeditor
             InitializeComponent();
         }
 
-
-        private void sth(object sender, MouseButtonEventArgs e)
+        private void RaceChoiceImgWariorIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             App.ParentWindowRef.ParentFrame.Navigate(new TEST());
         }
 
-        private void RaceChoiceImgHumanIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void MouseTestFunc(object sender, MouseEventArgs e)
         {
             App.ParentWindowRef.ParentFrame.Navigate(new TEST());
         }
+
+
     }
 }

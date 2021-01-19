@@ -118,6 +118,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="Img\DwarfIcon.png" />
+    <Resource Include="Img\ElfIcon.png" />
+    <Resource Include="Img\HalflingIcon.png" />
     <Resource Include="Img\HumanIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

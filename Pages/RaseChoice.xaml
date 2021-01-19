@@ -8,15 +8,27 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="RaseChoice" Width="1024" Height="720">
 
-    <Grid>
-        <Label x:Name="SimpleText" 
-               Content="TO DO RACE CHOICE" Margin="290,57,1259,1129"/>
-        
-        
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="720" >
+
         <Image x:Name="RaceChoiceImgHumanIcon" 
-               Source="C:\Users\Robert\source\repos\Feys98\PaperWarhammerPlayerEditor\Img\HumanIcon.png" 
-               MouseLeftButtonDown="RaceChoiceImgWariorIcon_MouseLeftButtonDown"           
-            
-               HorizontalAlignment="Left" Height="100" Margin="102,131,0,0" VerticalAlignment="Top" Width="100" />
+               Source="/WHeditor;component/Img/HumanIcon.png" 
+               MouseLeftButtonDown="RaceChoiceImgWariorIcon_MouseLeftButtonDown" VerticalAlignment="Top" MouseEnter="MouseTestFunc" HorizontalAlignment="Center" Width="100" Height="100" Margin="99,54,825,0" />
+
+
+
+
+
+
+
+        <Image x:Name="RaceChoiceImgElfIcon" 
+            Source="/WHeditor;component/Img/ElfIcon.png" 
+             Height="120" Margin="99,210,825,0" VerticalAlignment="Top" />
+        <Image x:Name="RaceChoiceImgDwarfIcon" 
+            Source="/WHeditor;component/Img/DwarfIcon.png" 
+            Height="110" Margin="99,374,825,0" VerticalAlignment="Top" />
+        <Image x:Name="RaceChoiceImgHalflingIcon" 
+            Source="/WHeditor;component/Img/HalflingIcon.png" 
+            Height="100" Margin="99,542,825,0" VerticalAlignment="Top" />
+
     </Grid>
 </Page>

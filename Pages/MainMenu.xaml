@@ -5,11 +5,87 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WHeditor"
       mc:Ignorable="d" 
-      Title="MainMenu" Width="Auto">
+      Title="MainMenu" Width="1024" Height="720">
 
-    <Grid Width="1024" Height="720" >
-        <Label x:Name="MainMenuTitle" Content="TO DO TITLE" HorizontalAlignment="Center" Height="109" Margin="318,56,318,555" VerticalAlignment="Center" Width="388" FontSize="48" FlowDirection="RightToLeft" Background="Black" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+    <Grid Width="auto" Height="auto" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="MainMenuTitle" 
+               Content="TO DO TITLE"
+               Grid.Row="0"
+               Grid.Column="1"
+               HorizontalAlignment="Center" Height="109"  
+               VerticalAlignment="Center" Width="388" 
+               FontSize="48" FlowDirection="RightToLeft" Background="Black" 
+               Foreground="White" 
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+        </Label>
+
         <Button x:Name="MainMenuButtonNewPlayer"           
+                Click="MainMenuButtonNewPlayer_Click" 
+                Content="NOWA POSTAC" 
+                Grid.Row="2"
+                Grid.Column="1"
+                VerticalAlignment="Center" 
+                Margin="0,0,0,0" 
+                Height="98" Width="400"
+                FontSize="48" 
+                FontWeight="Bold" FontFamily="Microsoft Yi Baiti" 
+                Background="Black" 
+                Foreground="#FFFF00F2" BorderBrush="Red">
+
+        </Button>
+
+        <Button x:Name="MainMenuButtonLoadPlayer" 
+                Click="MainMenuButtonLoadPlayer_Click"
+                Content="WCZYTAJ POSTAC" 
+                Grid.Row="3"
+                Grid.Column="1"
+                VerticalAlignment="Center" Margin="0,0,0,0" 
+                Height="94" Width="400"
+                FontSize="48" FontWeight="Bold" FontFamily="Microsoft Yi Baiti" 
+                 Background="Black" 
+                Foreground="#FFFF00F2" BorderBrush="Red">
+        </Button>
+
+        <Button x:Name="MainMenuButtonExit" 
+                Click="MainMenuButtonExit_Click" 
+                Content="WYJSCIE" 
+                Grid.Row="4"
+                Grid.Column="1"
+                VerticalAlignment="Center" 
+                Margin="0,0,0,0"
+                Height="94" Width="400" 
+                FontSize="48" 
+                FontWeight="Bold" FontFamily="Microsoft Yi Baiti" 
+                Background="Black" Foreground="#FFFF00F2" BorderBrush="Red">
+        </Button>
+
+
+    </Grid>
+</Page>
+
+
+
+
+
+
+
+
+<!--        <Button x:Name="MainMenuButtonNewPlayer"           
                 Click="MainMenuButtonNewPlayer_Click" 
                 Content="NOWA POSTAC" 
                 VerticalAlignment="Center" 
@@ -32,6 +108,4 @@
                 VerticalAlignment="Center" 
                 Margin="290,532,290,94" Height="94" FontSize="48" 
                 FontWeight="Bold" FontFamily="Microsoft Yi Baiti" 
-                Background="Black" Foreground="#FFFF00F2" BorderBrush="Red"/>
-    </Grid>
-</Page>
+                Background="Black" Foreground="#FFFF00F2" BorderBrush="Red"/>-->

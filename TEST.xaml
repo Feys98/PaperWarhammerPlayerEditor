@@ -9,7 +9,7 @@
       Title="TEST">
 
     <Grid>
-        <Button Content="TEST&#xD;&#xA;" HorizontalAlignment="Left" Height="237" Margin="404,148,0,0" VerticalAlignment="Top" Width="388"/>
+        <Button Content="TEST&#xD;&#xA;" HorizontalAlignment="Left" Height="237" Margin="404,148,0,0" VerticalAlignment="Top" Width="388" Click="test"/>
 
     </Grid>
 </Page>

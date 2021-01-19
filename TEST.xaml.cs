@@ -24,5 +24,10 @@ namespace WHeditor
         {
             InitializeComponent();
         }
+
+        private void test(object sender, RoutedEventArgs e)
+        {
+            App.Current.Shutdown();
+        }
     }
 }
