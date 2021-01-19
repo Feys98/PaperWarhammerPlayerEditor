@@ -50,5 +50,9 @@ namespace WHeditor
 
         }
 
+        private void RaceChoiceButtonElfIcon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
