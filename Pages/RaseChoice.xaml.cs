@@ -20,6 +20,8 @@ namespace WHeditor
     /// </summary>
     public partial class RaseChoice : Page
     {
+
+
         public RaseChoice()
         {
             InitializeComponent();
@@ -32,9 +34,21 @@ namespace WHeditor
 
         private void MouseTestFunc(object sender, MouseEventArgs e)
         {
-            App.ParentWindowRef.ParentFrame.Navigate(new TEST());
+           // RaceChoiceImgBorderHumanIcon.IsEnabled = true;
         }
 
+        private void RaceChoiceImgElfIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+        private void RaceChoiceImgDwarfIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+        private void RaceChoiceImgHalflingIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
 
     }
 }

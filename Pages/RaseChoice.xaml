@@ -8,8 +8,104 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="RaseChoice" Width="1024" Height="720">
 
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="720" >
 
+    <Page.Resources>
+        <ImageBrush x:Key="HumanIconWithBorder"
+                    ImageSource="/Img/HalflingIconWithBorder.png"/>
+    </Page.Resources>
+    
+    <Grid  Width="auto" Height="auto" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+
+        <!--titleRow-->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <!--andRest...-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--firstColumn-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Border  Grid.Column="1" Grid.RowSpan="6" Background="Gray"></Border>
+
+                
+
+                
+               
+                <Button
+                    x:Name="RaceChoiceImgHumanIcon" 
+                    Grid.Row="1"                    
+                    MouseLeftButtonDown="RaceChoiceImgWariorIcon_MouseLeftButtonDown" 
+                    VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="100" Margin="0,0,0,0" BorderBrush="Red" Foreground="Red">
+                    <Button.Background>
+                        <ImageBrush/>
+                    </Button.Background>
+                </Button>
+                
+               
+
+
+
+
+            </Grid>
+            <!--secondColumn-->
+            <Grid>
+
+            </Grid>
+            <!--thirdColumn-->
+            <Grid>
+
+            </Grid>
+        </Grid>
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Page>
+
+
+
+
+<!--
+    <Button.Background>
+    <ImageBrush ImageSource="/WHeditor;component/Img/HumanIcon.png"/>
+</Button.Background>
+    -->
+
+
+
+
+
+<!--
+    
         <Image x:Name="RaceChoiceImgHumanIcon" 
                Source="/WHeditor;component/Img/HumanIcon.png" 
                MouseLeftButtonDown="RaceChoiceImgWariorIcon_MouseLeftButtonDown" VerticalAlignment="Top" MouseEnter="MouseTestFunc" HorizontalAlignment="Center" Width="100" Height="100" Margin="99,54,825,0" />
@@ -29,6 +125,4 @@
         <Image x:Name="RaceChoiceImgHalflingIcon" 
             Source="/WHeditor;component/Img/HalflingIcon.png" 
             Height="100" Margin="99,542,825,0" VerticalAlignment="Top" />
-
-    </Grid>
-</Page>
+    -->

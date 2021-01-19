@@ -19,10 +19,14 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1.4*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
+
+        <Border  Grid.Column="1" Grid.RowSpan="6" Background="Red"/>
+
+        
         <Label x:Name="MainMenuTitle" 
                Content="TO DO TITLE"
                Grid.Row="0"
@@ -45,7 +49,7 @@
                 FontSize="48" 
                 FontWeight="Bold" FontFamily="Microsoft Yi Baiti" 
                 Background="Black" 
-                Foreground="#FFFF00F2" BorderBrush="Red">
+                Foreground="#FFFF00F2" BorderBrush="Red" OpacityMask="#FF295F19">
 
         </Button>
 
@@ -57,7 +61,7 @@
                 VerticalAlignment="Center" Margin="0,0,0,0" 
                 Height="94" Width="400"
                 FontSize="48" FontWeight="Bold" FontFamily="Microsoft Yi Baiti" 
-                 Background="Black" 
+                Background="Black" 
                 Foreground="#FFFF00F2" BorderBrush="Red">
         </Button>
 
