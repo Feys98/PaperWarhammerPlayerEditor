@@ -204,13 +204,16 @@
         <!--andRest...-->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
                 <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="4*"/>
                 <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
             <!--firstColumn-->
-            <Grid>
+            <Grid Grid.Column="1" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
                     <RowDefinition Height="3*"/>
@@ -219,7 +222,7 @@
                     <RowDefinition Height="3*"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
-                <Border  Grid.Column="1" Grid.RowSpan="6" Background="Gray"></Border>
+                <Border Grid.RowSpan="6" Background="Gray"></Border>
 
 
 
@@ -227,13 +230,11 @@
 
                 <Button
                     x:Name="RaceChoiceButtonHumanIcon" 
-                    Grid.Row="1"                    
-                    VerticalAlignment="Center"  Width="100"
-                    HorizontalAlignment="Center" Height="100" 
+                    Grid.Row="1"  Width="100" Height="100" 
                     Margin="0,0,0,0" 
                     BorderBrush="Black"  BorderThickness="3" 
                     Style="{DynamicResource RaseChoiceButtonStyleHuman}">
-                    
+
                     <Button.Background>
                         <ImageBrush ImageSource="/WHeditor;component/Images/PageRaseChoice/HumanIcon.png"/>
                     </Button.Background>
@@ -243,9 +244,7 @@
 
                 <Button
                     x:Name="RaceChoiceButtonElfIcon" 
-                    Grid.Row="2"                      
-                    VerticalAlignment="Center"  Width="100"
-                    HorizontalAlignment="Center" Height="100" 
+                    Grid.Row="2"  Width="100" Height="100" 
                     Margin="0,0,0,0" 
                     BorderBrush="Black"  BorderThickness="3" 
                     Style="{DynamicResource RaseChoiceButtonStyleElf}">
@@ -256,9 +255,7 @@
 
                 <Button
                     x:Name="RaceChoiceButtonDwarfIcon" 
-                    Grid.Row="3"                    
-                    VerticalAlignment="Center"  Width="100"
-                    HorizontalAlignment="Center" Height="100" 
+                    Grid.Row="3"  Width="100" Height="100" 
                     Margin="0,0,0,0" 
                     BorderBrush="Black"  BorderThickness="3"
                     Style="{DynamicResource RaseChoiceButtonStyleDwarf}">
@@ -269,9 +266,7 @@
 
                 <Button
                     x:Name="RaceChoiceButtonHalflingIcon" 
-                    Grid.Row="4"                    
-                    VerticalAlignment="Center"  Width="100"
-                    HorizontalAlignment="Center" Height="100" 
+                    Grid.Row="4"  Width="100" Height="100" 
                     Margin="0,0,0,0" 
                     BorderBrush="Black"  BorderThickness="3"
                     Style="{DynamicResource RaseChoiceButtonStyleHalfling}">
@@ -284,14 +279,23 @@
 
 
 
-
             </Grid>
             <!--secondColumn-->
-            <Grid>
+            <Grid Grid.Column="3">
+                <Label x:Name="SimpleLabel" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Height="447" Width="317"/>
+
 
             </Grid>
             <!--thirdColumn-->
-            <Grid>
+            <Grid Grid.Column="4">
+                <Image x:Name="SimpleIMG"                      
+                 Width="100" Height="100" 
+                 Margin="0,0,0,0"/>
+
+
+
+
+
 
             </Grid>
         </Grid>

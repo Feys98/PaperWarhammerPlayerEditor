@@ -21,10 +21,12 @@ namespace WHeditor
     public partial class RaseChoice : Page
     {
 
-
+        
         public RaseChoice()
         {
             InitializeComponent();
+            SimpleLabel.Content = "TwojaStaraNapierdala";
+            SimpleIMG.Source = new BitmapImage(new Uri(@"/WHeditor;component/Images/PageRaseChoice/HalflingIcon.png"));
         }
 
         private void RaceChoiceImgWariorIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -36,6 +38,8 @@ namespace WHeditor
         {
            // RaceChoiceImgBorderHumanIcon.IsEnabled = true;
         }
+
+
 
         private void RaceChoiceImgElfIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
