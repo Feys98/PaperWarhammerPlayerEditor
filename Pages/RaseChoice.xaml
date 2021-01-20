@@ -236,10 +236,10 @@
                     Style="{DynamicResource RaseChoiceButtonStyleHuman}" 
                     Click="RaceChoiceButtonWariorIcon_Click">
 
-
                     <Button.Background>
                         <ImageBrush ImageSource="/WHeditor;component/Images/PageRaseChoice/HumanIcon.png"/>
                     </Button.Background>
+
                 </Button>
 
 
@@ -250,10 +250,12 @@
                     Margin="0,0,0,0" 
                     BorderBrush="Black"  BorderThickness="3" 
                     Style="{DynamicResource RaseChoiceButtonStyleElf}"
-                    Click="RaceChoiceButtonElfIcon_Click">>
+                    Click="RaceChoiceButtonElfIcon_Click">
+
                     <Button.Background>
                         <ImageBrush ImageSource="/WHeditor;component/Images/PageRaseChoice/ElfIcon.png"/>
                     </Button.Background>
+
                 </Button>
 
                 <Button
@@ -263,9 +265,11 @@
                     BorderBrush="Black"  BorderThickness="3"
                     Style="{DynamicResource RaseChoiceButtonStyleDwarf}"
                     Click="RaceChoiceButtonDwarfIcon_Click">
+
                     <Button.Background>
                         <ImageBrush ImageSource="/WHeditor;component/Images/PageRaseChoice/DwarfIcon.png"/>
                     </Button.Background>
+
                 </Button>
 
                 <Button
@@ -275,9 +279,11 @@
                     BorderBrush="Black"  BorderThickness="3"
                     Style="{DynamicResource RaseChoiceButtonStyleHalfling}"
                     Click="RaceChoiceButtonHalflingIcon_Click">
+
                     <Button.Background>
                         <ImageBrush ImageSource="/WHeditor;component/Images/PageRaseChoice/HalflingIcon.png"/>
                     </Button.Background>
+
                 </Button>
 
 
@@ -287,36 +293,24 @@
             </Grid>
             <!--secondColumn-->
             <Grid Grid.Column="3">
-                <Label x:Name="SimpleLabel" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Height="447" Width="317"/>
+                <TextBlock x:Name="RaseChoiceTextBlockRaseDescription" 
+                           Margin="0,0,0,0" 
+                           Height="432" Width="317"
+                           TextWrapping="Wrap">
+                </TextBlock>
 
 
             </Grid>
             <!--thirdColumn-->
             <Grid Grid.Column="4">
-                <Image x:Name="SimpleIMG" 
-                 Margin="0,0,0,0" Width="250" Height="400" />
-
-
-
-
-
-
-
+                <Image x:Name="RaseChoiceImageRaseImg" 
+                       Margin="0,0,0,0" 
+                       Width="250" Height="400" >
+                </Image>
 
             </Grid>
 
         </Grid>
-
-
-
-
-
-
-
-
-
-
-
     </Grid>
 </Page>
 

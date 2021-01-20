@@ -25,35 +25,37 @@ namespace WHeditor
         public RaseChoice()
         {
             InitializeComponent();
-            SimpleLabel.Content = "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
-                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
-                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
-                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
-                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
-                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
-                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
-                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
-                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
-                "TwojaStaraNapierdala ";
-            //SimpleIMG.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/WariorImg.png", UriKind.Relative));
         }
+
+
+
 
 
         private void RaceChoiceButtonWariorIcon_Click (object sender, RoutedEventArgs e)
         {
-            SimpleIMG.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/WariorImg.png", UriKind.Relative));
+            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/WariorImg.png", UriKind.Relative));
+            RaseChoiceTextBlockRaseDescription.Text = "SimpleTextHuman\n"+
+                "111LoriumMadafakiumFakapium...111LoriumMadafakiumFakapium..." +
+                "111LoriumMadafakiumFakapium...111LoriumMadafakiumFakapium...111LoriumMadafakiumFakapium...111LoriumMadafakiumFakapium...";
+
+
         }
         private void RaceChoiceButtonElfIcon_Click(object sender, RoutedEventArgs e)
         {
-            SimpleIMG.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/ElfImg.png", UriKind.Relative));
+            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/ElfImg.png", UriKind.Relative));
+            RaseChoiceTextBlockRaseDescription.Text = "simpletextElf";
         }
         private void RaceChoiceButtonDwarfIcon_Click(object sender, RoutedEventArgs e)
         {
-            SimpleIMG.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/DwarfImg.png", UriKind.Relative));
+            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/DwarfImg.png", UriKind.Relative));
+            RaseChoiceTextBlockRaseDescription.Text = "Simple text Dwarf";
+
         }
         private void RaceChoiceButtonHalflingIcon_Click(object sender, RoutedEventArgs e)
         {
-            SimpleIMG.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/HalflingImg.png", UriKind.Relative));
+            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/HalflingImg.png", UriKind.Relative));
+            RaseChoiceTextBlockRaseDescription.Text = "simpleTextHalfling";
+
         }
     }
 }
