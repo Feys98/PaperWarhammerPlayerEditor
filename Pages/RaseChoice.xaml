@@ -233,7 +233,9 @@
                     Grid.Row="1"  Width="100" Height="100" 
                     Margin="0,0,0,0" 
                     BorderBrush="Black"  BorderThickness="3" 
-                    Style="{DynamicResource RaseChoiceButtonStyleHuman}">
+                    Style="{DynamicResource RaseChoiceButtonStyleHuman}" 
+                    Click="RaceChoiceButtonWariorIcon_Click">
+
 
                     <Button.Background>
                         <ImageBrush ImageSource="/WHeditor;component/Images/PageRaseChoice/HumanIcon.png"/>
@@ -247,7 +249,8 @@
                     Grid.Row="2"  Width="100" Height="100" 
                     Margin="0,0,0,0" 
                     BorderBrush="Black"  BorderThickness="3" 
-                    Style="{DynamicResource RaseChoiceButtonStyleElf}">
+                    Style="{DynamicResource RaseChoiceButtonStyleElf}"
+                    Click="RaceChoiceButtonElfIcon_Click">>
                     <Button.Background>
                         <ImageBrush ImageSource="/WHeditor;component/Images/PageRaseChoice/ElfIcon.png"/>
                     </Button.Background>
@@ -258,7 +261,8 @@
                     Grid.Row="3"  Width="100" Height="100" 
                     Margin="0,0,0,0" 
                     BorderBrush="Black"  BorderThickness="3"
-                    Style="{DynamicResource RaseChoiceButtonStyleDwarf}">
+                    Style="{DynamicResource RaseChoiceButtonStyleDwarf}"
+                    Click="RaceChoiceButtonDwarfIcon_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/WHeditor;component/Images/PageRaseChoice/DwarfIcon.png"/>
                     </Button.Background>
@@ -269,7 +273,8 @@
                     Grid.Row="4"  Width="100" Height="100" 
                     Margin="0,0,0,0" 
                     BorderBrush="Black"  BorderThickness="3"
-                    Style="{DynamicResource RaseChoiceButtonStyleHalfling}">
+                    Style="{DynamicResource RaseChoiceButtonStyleHalfling}"
+                    Click="RaceChoiceButtonHalflingIcon_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="/WHeditor;component/Images/PageRaseChoice/HalflingIcon.png"/>
                     </Button.Background>
@@ -288,9 +293,10 @@
             </Grid>
             <!--thirdColumn-->
             <Grid Grid.Column="4">
-                <Image x:Name="SimpleIMG"                      
-                 Width="100" Height="100" 
-                 Margin="0,0,0,0"/>
+                <Image x:Name="SimpleIMG" 
+                 Margin="0,0,0,0" Width="250" Height="400" />
+
+
 
 
 
@@ -298,6 +304,7 @@
 
 
             </Grid>
+
         </Grid>
 
 

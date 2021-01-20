@@ -25,38 +25,35 @@ namespace WHeditor
         public RaseChoice()
         {
             InitializeComponent();
-            SimpleLabel.Content = "TwojaStaraNapierdala";
-            SimpleIMG.Source = new BitmapImage(new Uri(@"/WHeditor;component/Images/PageRaseChoice/HalflingIcon.png"));
+            SimpleLabel.Content = "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
+                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
+                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
+                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
+                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
+                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
+                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
+                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
+                "TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala TwojaStaraNapierdala " +
+                "TwojaStaraNapierdala ";
+            //SimpleIMG.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/WariorImg.png", UriKind.Relative));
         }
 
-        private void RaceChoiceImgWariorIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+
+        private void RaceChoiceButtonWariorIcon_Click (object sender, RoutedEventArgs e)
         {
-            App.ParentWindowRef.ParentFrame.Navigate(new TEST());
+            SimpleIMG.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/WariorImg.png", UriKind.Relative));
         }
-
-        private void MouseTestFunc(object sender, MouseEventArgs e)
-        {
-           // RaceChoiceImgBorderHumanIcon.IsEnabled = true;
-        }
-
-
-
-        private void RaceChoiceImgElfIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-        private void RaceChoiceImgDwarfIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-        private void RaceChoiceImgHalflingIcon_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
         private void RaceChoiceButtonElfIcon_Click(object sender, RoutedEventArgs e)
         {
-
+            SimpleIMG.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/ElfImg.png", UriKind.Relative));
+        }
+        private void RaceChoiceButtonDwarfIcon_Click(object sender, RoutedEventArgs e)
+        {
+            SimpleIMG.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/DwarfImg.png", UriKind.Relative));
+        }
+        private void RaceChoiceButtonHalflingIcon_Click(object sender, RoutedEventArgs e)
+        {
+            SimpleIMG.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/HalflingImg.png", UriKind.Relative));
         }
     }
 }
