@@ -75,16 +75,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DBConnection.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBConnection.dbml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\RaseChoice.xaml.cs">
       <DependentUpon>RaseChoice.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TEST.xaml.cs">
-      <DependentUpon>TEST.xaml</DependentUpon>
     </Compile>
     <Compile Include="WHPE_dbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -115,10 +107,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TEST.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -138,14 +126,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="DBConnection.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DBConnection.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DBConnection.dbml.layout">
-      <DependentUpon>DBConnection.dbml</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
