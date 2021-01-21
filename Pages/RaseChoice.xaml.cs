@@ -32,7 +32,6 @@ namespace WHeditor
     public partial class RaseChoice : Page
     {
 
-        DBConnectionDataContext dbc = new DBConnectionDataContext(Properties.Settings.Default.WHPE_dbConnectionString);
         public RaseChoice()
         {
             InitializeComponent();
@@ -71,7 +70,7 @@ namespace WHeditor
             }
 
 
-
+            cnn.Close();
 
             //----------------
 
