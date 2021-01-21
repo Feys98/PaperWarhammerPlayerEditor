@@ -78,6 +78,9 @@
     <Compile Include="Pages\RaseChoice.xaml.cs">
       <DependentUpon>RaseChoice.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WHPE_dbDataSet.cs">
+      <DependentUpon>WHPE_dbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="WHPE_dbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -131,16 +134,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="WHPE_dbDataSet.xsc">
-      <DependentUpon>WHPE_dbDataSet.xsd</DependentUpon>
-    </None>
     <None Include="WHPE_dbDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>WHPE_dbDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </None>
-    <None Include="WHPE_dbDataSet.xss">
-      <DependentUpon>WHPE_dbDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
