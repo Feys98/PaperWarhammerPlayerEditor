@@ -75,9 +75,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Func\DataBaseReader.cs" />
     <Compile Include="Pages\RaseChoice.xaml.cs">
       <DependentUpon>RaseChoice.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Func\Player.cs" />
     <Compile Include="WHPE_dbDataSet.cs">
       <DependentUpon>WHPE_dbDataSet.xsd</DependentUpon>
     </Compile>
@@ -134,10 +136,16 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="WHPE_dbDataSet.xsc">
+      <DependentUpon>WHPE_dbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="WHPE_dbDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>WHPE_dbDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="WHPE_dbDataSet.xss">
+      <DependentUpon>WHPE_dbDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -31,68 +31,42 @@ namespace WHeditor
 
     public partial class RaseChoice : Page
     {
-
         public RaseChoice()
         {
             InitializeComponent();
-        }  
+        }
 
 
-
-
-
-        private void RaceChoiceButtonWariorIcon_Click (object sender, RoutedEventArgs e)
+        private void RaceChoiceButtonHumanIcon_Click (object sender, RoutedEventArgs e)
         {
-            //----------------
-
-            string connectionString;
-            SqlConnection cnn;
-
-            connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\WHPE_db.mdf;Integrated Security=True";
-
-            cnn = new SqlConnection(connectionString);
-
-            cnn.Open();
-
-            SqlCommand command;
-            SqlDataReader dataReader;
-            String sql, Output = "";
-
-            sql = "Select RaseName From Rase Where id = '1'";
-
-            command = new SqlCommand(sql, cnn);
-
-            dataReader = command.ExecuteReader();
-
-            while (dataReader.Read())
-            {
-                Output = Output + dataReader.GetValue(0) ;
-            }
-
-
-            cnn.Close();
-
-            //----------------
-
-            RaseChoiceTextBlockRaseDescription.Text = Output;
+            Player.RaseID = 1;
+            RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
+            RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
             RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/WariorImg.png", UriKind.Relative));
         }
         private void RaceChoiceButtonElfIcon_Click(object sender, RoutedEventArgs e)
         {
+            Player.RaseID = 2;
+
+            RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
+            RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
             RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/ElfImg.png", UriKind.Relative));
-            RaseChoiceTextBlockRaseDescription.Text = "simpletextElf";
         }
         private void RaceChoiceButtonDwarfIcon_Click(object sender, RoutedEventArgs e)
         {
-            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/DwarfImg.png", UriKind.Relative));
-            RaseChoiceTextBlockRaseDescription.Text = "Simple text Dwarf";
+            Player.RaseID = 3;
 
+            RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
+            RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
+            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/DwarfImg.png", UriKind.Relative));
         }
         private void RaceChoiceButtonHalflingIcon_Click(object sender, RoutedEventArgs e)
         {
-            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/HalflingImg.png", UriKind.Relative));
-            RaseChoiceTextBlockRaseDescription.Text = "simpleTextHalfling";
+            Player.RaseID = 4;
 
+            RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
+            RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
+            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/HalflingImg.png", UriKind.Relative));
         }
     }
 }

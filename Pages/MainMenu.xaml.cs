@@ -23,13 +23,13 @@ namespace WHeditor
         public MainMenu()
         {
             InitializeComponent();
+
         }
 
         private void MainMenuButtonNewPlayer_Click(object sender, RoutedEventArgs e)
         {
-
-            App.ParentWindowRef.ParentFrame.Navigate(new RaseChoice());
-           //TODO
+            DataBaseReader.Load();
+            NavigationService.Navigate(new RaseChoice());
         }
         private void MainMenuButtonLoadPlayer_Click(object sender, RoutedEventArgs e)
         {

@@ -206,10 +206,8 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*"/>
                 <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="0.5*"/>
-                <ColumnDefinition Width="4*"/>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="8.5*"/>
+
             </Grid.ColumnDefinitions>
 
             <!--firstColumn-->
@@ -234,7 +232,7 @@
                     Margin="0,0,0,0" 
                     BorderBrush="Black"  BorderThickness="3" 
                     Style="{DynamicResource RaseChoiceButtonStyleHuman}" 
-                    Click="RaceChoiceButtonWariorIcon_Click">
+                    Click="RaceChoiceButtonHumanIcon_Click">
 
                     <Button.Background>
                         <ImageBrush ImageSource="/WHeditor;component/Images/PageRaseChoice/HumanIcon.png"/>
@@ -293,25 +291,81 @@
             </Grid>
             <!--secondColumn-->
             <Grid Grid.Column="3">
-                <TextBlock x:Name="RaseChoiceTextBlockRaseDescription" 
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="6*"/>
+                </Grid.RowDefinitions>
+
+                <Grid  Grid.Row="0">
+
+                    <TextBlock x:Name="RaseChoiceTextBlockRaseName" 
+                           Margin="0,0,0,0" 
+                           Height="50" Width="400"
+                           TextWrapping="Wrap">
+                    </TextBlock>
+
+                </Grid>
+                
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="1">
+                        <TextBlock x:Name="RaseChoiceTextBlockRaseDescription" 
                            Margin="0,0,0,0" 
                            Height="432" Width="317"
                            TextWrapping="Wrap">
-                </TextBlock>
-
-
+                        </TextBlock>
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <Image x:Name="RaseChoiceImageRaseImg" 
+                           Margin="0,0,0,0" 
+                           Width="250" Height="400" >
+                        </Image>
+                    </Grid>
+                    
+                </Grid>
+                
+                
+               
             </Grid>
-            <!--thirdColumn-->
-            <Grid Grid.Column="4">
-                <Image x:Name="RaseChoiceImageRaseImg" 
-                       Margin="0,0,0,0" 
-                       Width="250" Height="400" >
-                </Image>
-
-            </Grid>
-
         </Grid>
     </Grid>
 </Page>
 
 
+
+<!--<Grid.RowDefinitions>
+    <RowDefinition Height="1*"/>
+    <RowDefinition Height="6*"/>
+</Grid.RowDefinitions>
+
+<Grid>
+
+</Grid>
+<Grid Grid.Row="2">
+
+</Grid>
+<Grid.ColumnDefinitions>
+    <ColumnDefinition Width="0.5*"/>
+    <ColumnDefinition Width="3*"/>
+    <ColumnDefinition Width="3*"/>
+    <ColumnDefinition Width="0.5*"/>
+</Grid.ColumnDefinitions>
+<Grid Grid.Column="1">
+    <TextBlock x:Name="RaseChoiceTextBlockRaseDescription" 
+                           Margin="0,0,0,0" 
+                           Height="432" Width="317"
+                           TextWrapping="Wrap">
+    </TextBlock>
+</Grid>
+<Grid Grid.Column="2">
+    <Image x:Name="RaseChoiceImageRaseImg" 
+                       Margin="0,0,0,0" 
+                       Width="250" Height="400" >
+    </Image>
+</Grid>-->
