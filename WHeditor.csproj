@@ -180,6 +180,8 @@
     <Resource Include="Images\PageRaseChoice\ElfImg.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\PageRaseChoice\NextPageButton.png" />
+    <Resource Include="Images\PageRaseChoice\NextPageButtonWithBorder.png" />
     <Content Include="WHPE_db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

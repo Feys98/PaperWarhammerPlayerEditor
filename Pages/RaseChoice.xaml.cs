@@ -33,7 +33,7 @@ namespace WHeditor
     {
         public RaseChoice()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
 
@@ -43,6 +43,7 @@ namespace WHeditor
             RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
             RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/WariorImg.png", UriKind.Relative));
+            RaseChoiceButtonNextPage.Visibility = Visibility.Visible;
         }
         private void RaceChoiceButtonElfIcon_Click(object sender, RoutedEventArgs e)
         {
@@ -51,6 +52,7 @@ namespace WHeditor
             RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
             RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/ElfImg.png", UriKind.Relative));
+            RaseChoiceButtonNextPage.Visibility = Visibility.Visible;
         }
         private void RaceChoiceButtonDwarfIcon_Click(object sender, RoutedEventArgs e)
         {
@@ -59,6 +61,7 @@ namespace WHeditor
             RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
             RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/DwarfImg.png", UriKind.Relative));
+            RaseChoiceButtonNextPage.Visibility = Visibility.Visible;
         }
         private void RaceChoiceButtonHalflingIcon_Click(object sender, RoutedEventArgs e)
         {
@@ -67,6 +70,12 @@ namespace WHeditor
             RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
             RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/HalflingImg.png", UriKind.Relative));
+            RaseChoiceButtonNextPage.Visibility = Visibility.Visible;
+        }
+
+        private void RaceChoiceButtonNexyPage_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

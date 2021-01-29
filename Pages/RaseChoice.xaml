@@ -18,6 +18,14 @@
          ImageSource="/WHeditor;component/Images/PageRaseChoice/DwarfIconWithBorder.png"/>
         <ImageBrush x:Key="RaseChoiceImageHalflingIconWithBorder" 
          ImageSource="/WHeditor;component/Images/PageRaseChoice/HalflingIconWithBorder.png"/>
+
+
+        <ImageBrush x:Key="RaseChoiceNextPageButtonWithBorder" 
+         ImageSource="/WHeditor;component/Images/PageRaseChoice/NextPageButtonWithBorder.png"/>
+
+
+
+
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
                 <Setter.Value>
@@ -57,7 +65,7 @@
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource RaseChoiceImageHumanIconWithBorder}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="Black"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
@@ -94,7 +102,7 @@
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource RaseChoiceImageElfIconWithBorder}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="Black"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
@@ -131,7 +139,7 @@
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource RaseChoiceImageDwarfIconWithBorder}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="Black"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
@@ -168,7 +176,44 @@
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource RaseChoiceImageHalflingIconWithBorder}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="Black"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonNextPage" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource RaseChoiceNextPageButtonWithBorder}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="Black"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
@@ -191,7 +236,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="6*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1.5*"/>
         </Grid.RowDefinitions>
 
         <!--titleRow-->
@@ -305,7 +350,7 @@
                     </TextBlock>
 
                 </Grid>
-                
+
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0.5*"/>
@@ -327,13 +372,31 @@
                            Width="250" Height="400" >
                         </Image>
                     </Grid>
-                    
+
                 </Grid>
-                
-                
-               
+
+
+
             </Grid>
         </Grid>
+
+        <Grid Grid.Row="2">
+            <Button x:Name="RaseChoiceButtonNextPage"      
+                    Click="RaceChoiceButtonNexyPage_Click"
+                    HorizontalAlignment="Right" 
+                    Margin="0,12,136,65.333" 
+                    Width="200" Height="50" Style="{DynamicResource ButtonNextPage}" 
+                    Visibility="Hidden"
+                    >
+
+                <Button.Background >
+                    <ImageBrush ImageSource = "/WHeditor;component/Images/PageRaseChoice/NextPageButton.png"/>
+                </Button.Background >
+
+            </Button>
+
+        </Grid>
+
     </Grid>
 </Page>
 

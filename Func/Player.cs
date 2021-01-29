@@ -9,7 +9,7 @@ namespace WHeditor
     
     public static class Player
     {
-        private static int raseID;
+        private static int raseID = 0;
         public static int RaseID 
         { 
             get { return raseID; } 
