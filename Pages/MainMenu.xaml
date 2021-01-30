@@ -49,7 +49,7 @@
                 Grid.Column="1"
                 VerticalAlignment="Center" 
                 Margin="0,0,0,0" 
-                Height="98" Width="400"
+                Height="100" Width="400"
                 FontSize="48" 
                 FontWeight="Bold" FontFamily="Microsoft Yi Baiti" 
                 Foreground="White" BorderBrush="Black" OpacityMask="#FF295F19">
@@ -68,7 +68,7 @@
                 Grid.Row="3"
                 Grid.Column="1"
                 VerticalAlignment="Center" Margin="0,0,0,0" 
-                Height="94" Width="400"
+                Height="100" Width="400"
                 FontSize="48" FontWeight="Bold" FontFamily="Microsoft Yi Baiti" 
                 Foreground="White" BorderBrush="Red">
             <Button.Background>
@@ -86,7 +86,7 @@
                 Grid.Column="1"
                 VerticalAlignment="Center" 
                 Margin="0,0,0,0"
-                Height="94" Width="400" 
+                Height="100" Width="400" 
                 FontSize="48" 
                 FontWeight="Bold" FontFamily="Microsoft Yi Baiti" Foreground="White" BorderBrush="Red">
             <Button.Background>

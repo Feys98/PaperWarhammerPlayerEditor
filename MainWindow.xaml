@@ -15,7 +15,11 @@
         >
 
     <DockPanel>
-        <Frame Name="ParentFrame" NavigationUIVisibility="Hidden" Background="#FFEF8181"/>
+        <Frame Name="ParentFrame" NavigationUIVisibility="Hidden">
+            <Frame.Background>
+                <ImageBrush ImageSource="Images/PageMenu/tlo.jpg"/>
+            </Frame.Background>
+        </Frame>
     </DockPanel>
 
 </Window>
