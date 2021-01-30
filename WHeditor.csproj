@@ -189,6 +189,7 @@
   <ItemGroup>
     <Resource Include="Images\PageRaseChoice\NextPageButton.png" />
     <Resource Include="Images\PageRaseChoice\NextPageButtonWithBorder.png" />
+    <Resource Include="Images\PageMenu\oldpaper.jpg" />
     <Content Include="WHPE_db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

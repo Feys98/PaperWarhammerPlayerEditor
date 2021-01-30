@@ -24,9 +24,13 @@
         </Grid.ColumnDefinitions>
 
 
-        <Border  Grid.Column="1" Grid.RowSpan="6" Background="Red"/>
+        <Border  Grid.Column="1" Grid.RowSpan="6">
+            <Border.Background>
+                <ImageBrush ImageSource="/WHeditor;component/Images/pagemenu/oldpaper.jpg"/>
+            </Border.Background>
+        </Border>
 
-        
+
         <Label x:Name="MainMenuTitle" 
                Content="TO DO TITLE"
                Grid.Row="0"
@@ -48,8 +52,13 @@
                 Height="98" Width="400"
                 FontSize="48" 
                 FontWeight="Bold" FontFamily="Microsoft Yi Baiti" 
-                Background="Black" 
-                Foreground="#FFFF00F2" BorderBrush="Red" OpacityMask="#FF295F19">
+                Foreground="White" BorderBrush="Black" OpacityMask="#FF295F19">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.003"/>
+                </LinearGradientBrush>
+            </Button.Background>
 
         </Button>
 
@@ -61,8 +70,13 @@
                 VerticalAlignment="Center" Margin="0,0,0,0" 
                 Height="94" Width="400"
                 FontSize="48" FontWeight="Bold" FontFamily="Microsoft Yi Baiti" 
-                Background="Black" 
-                Foreground="#FFFF00F2" BorderBrush="Red">
+                Foreground="White" BorderBrush="Red">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Button.Background>
         </Button>
 
         <Button x:Name="MainMenuButtonExit" 
@@ -74,8 +88,13 @@
                 Margin="0,0,0,0"
                 Height="94" Width="400" 
                 FontSize="48" 
-                FontWeight="Bold" FontFamily="Microsoft Yi Baiti" 
-                Background="Black" Foreground="#FFFF00F2" BorderBrush="Red">
+                FontWeight="Bold" FontFamily="Microsoft Yi Baiti" Foreground="White" BorderBrush="Red">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Button.Background>
         </Button>
 
 
