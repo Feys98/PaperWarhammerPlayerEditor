@@ -18,14 +18,6 @@
          ImageSource="/WHeditor;component/Images/PageRaseChoice/DwarfIconWithBorder.png"/>
         <ImageBrush x:Key="RaseChoiceImageHalflingIconWithBorder" 
          ImageSource="/WHeditor;component/Images/PageRaseChoice/HalflingIconWithBorder.png"/>
-
-
-        <ImageBrush x:Key="RaseChoiceNextPageButtonWithBorder" 
-         ImageSource="/WHeditor;component/Images/PageRaseChoice/NextPageButtonWithBorder.png"/>
-
-
-
-
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
                 <Setter.Value>
@@ -65,7 +57,7 @@
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource RaseChoiceImageHumanIconWithBorder}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="Black"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
@@ -102,7 +94,7 @@
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource RaseChoiceImageElfIconWithBorder}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="Black"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
@@ -139,7 +131,7 @@
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource RaseChoiceImageDwarfIconWithBorder}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="Black"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
@@ -176,44 +168,7 @@
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource RaseChoiceImageHalflingIconWithBorder}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="Black"/>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
-                            </Trigger>
-                            <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
-                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="ButtonNextPage" TargetType="{x:Type Button}">
-            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
-            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
-            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
-            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-            <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Padding" Value="1"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
-                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsDefaulted" Value="true">
-                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource RaseChoiceNextPageButtonWithBorder}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="Black"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
@@ -236,7 +191,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="6*"/>
-            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
         <!--titleRow-->
@@ -251,8 +206,10 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*"/>
                 <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="8.5*"/>
-
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
 
             <!--firstColumn-->
@@ -277,12 +234,12 @@
                     Margin="0,0,0,0" 
                     BorderBrush="Black"  BorderThickness="3" 
                     Style="{DynamicResource RaseChoiceButtonStyleHuman}" 
-                    Click="RaceChoiceButtonHumanIcon_Click">
+                    Click="RaceChoiceButtonWariorIcon_Click">
+
 
                     <Button.Background>
                         <ImageBrush ImageSource="/WHeditor;component/Images/PageRaseChoice/HumanIcon.png"/>
                     </Button.Background>
-
                 </Button>
 
 
@@ -293,12 +250,10 @@
                     Margin="0,0,0,0" 
                     BorderBrush="Black"  BorderThickness="3" 
                     Style="{DynamicResource RaseChoiceButtonStyleElf}"
-                    Click="RaceChoiceButtonElfIcon_Click">
-
+                    Click="RaceChoiceButtonElfIcon_Click">>
                     <Button.Background>
                         <ImageBrush ImageSource="/WHeditor;component/Images/PageRaseChoice/ElfIcon.png"/>
                     </Button.Background>
-
                 </Button>
 
                 <Button
@@ -308,11 +263,9 @@
                     BorderBrush="Black"  BorderThickness="3"
                     Style="{DynamicResource RaseChoiceButtonStyleDwarf}"
                     Click="RaceChoiceButtonDwarfIcon_Click">
-
                     <Button.Background>
                         <ImageBrush ImageSource="/WHeditor;component/Images/PageRaseChoice/DwarfIcon.png"/>
                     </Button.Background>
-
                 </Button>
 
                 <Button
@@ -322,11 +275,9 @@
                     BorderBrush="Black"  BorderThickness="3"
                     Style="{DynamicResource RaseChoiceButtonStyleHalfling}"
                     Click="RaceChoiceButtonHalflingIcon_Click">
-
                     <Button.Background>
                         <ImageBrush ImageSource="/WHeditor;component/Images/PageRaseChoice/HalflingIcon.png"/>
                     </Button.Background>
-
                 </Button>
 
 
@@ -336,99 +287,71 @@
             </Grid>
             <!--secondColumn-->
             <Grid Grid.Column="3">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="1*"/>
-                    <RowDefinition Height="6*"/>
-                </Grid.RowDefinitions>
+                <Label x:Name="SimpleLabel" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Height="447" Width="317"/>
 
-                <Grid  Grid.Row="0">
 
-                    <TextBlock x:Name="RaseChoiceTextBlockRaseName" 
-                           Margin="0,0,0,0" 
-                           Height="50" Width="400"
-                           TextWrapping="Wrap">
-                    </TextBlock>
+            </Grid>
+            <!--thirdColumn-->
+            <Grid Grid.Column="4">
+                <Image x:Name="SimpleIMG" 
+                 Margin="0,0,0,0" Width="250" Height="400" />
 
-                </Grid>
 
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.5*"/>
-                        <ColumnDefinition Width="3*"/>
-                        <ColumnDefinition Width="3*"/>
-                        <ColumnDefinition Width="0.5*"/>
-                    </Grid.ColumnDefinitions>
 
-                    <Grid Grid.Column="1">
-                        <TextBlock x:Name="RaseChoiceTextBlockRaseDescription" 
-                           Margin="0,0,0,0" 
-                           Height="432" Width="317"
-                           TextWrapping="Wrap">
-                        </TextBlock>
-                    </Grid>
-                    <Grid Grid.Column="2">
-                        <Image x:Name="RaseChoiceImageRaseImg" 
-                           Margin="0,0,0,0" 
-                           Width="250" Height="400" >
-                        </Image>
-                    </Grid>
 
-                </Grid>
+
 
 
 
             </Grid>
-        </Grid>
-
-        <Grid Grid.Row="2">
-            <Button x:Name="RaseChoiceButtonNextPage"      
-                    Click="RaceChoiceButtonNexyPage_Click"
-                    HorizontalAlignment="Right" 
-                    Margin="0,20,33,57.333" 
-                    Width="200" Height="50" Style="{DynamicResource ButtonNextPage}" 
-                    Visibility="Hidden"
-                    >
-
-                <Button.Background >
-                    <ImageBrush ImageSource = "/WHeditor;component/Images/PageRaseChoice/NextPageButton.png"/>
-                </Button.Background >
-
-            </Button>
 
         </Grid>
+
+
+
+
+
+
+
+
+
+
 
     </Grid>
 </Page>
 
 
 
-<!--<Grid.RowDefinitions>
-    <RowDefinition Height="1*"/>
-    <RowDefinition Height="6*"/>
-</Grid.RowDefinitions>
 
-<Grid>
+<!--
+    <Button.Background>
+    <ImageBrush ImageSource="/WHeditor;component/Img/HumanIcon.png"/>
+</Button.Background>
+    -->
 
-</Grid>
-<Grid Grid.Row="2">
 
-</Grid>
-<Grid.ColumnDefinitions>
-    <ColumnDefinition Width="0.5*"/>
-    <ColumnDefinition Width="3*"/>
-    <ColumnDefinition Width="3*"/>
-    <ColumnDefinition Width="0.5*"/>
-</Grid.ColumnDefinitions>
-<Grid Grid.Column="1">
-    <TextBlock x:Name="RaseChoiceTextBlockRaseDescription" 
-                           Margin="0,0,0,0" 
-                           Height="432" Width="317"
-                           TextWrapping="Wrap">
-    </TextBlock>
-</Grid>
-<Grid Grid.Column="2">
-    <Image x:Name="RaseChoiceImageRaseImg" 
-                       Margin="0,0,0,0" 
-                       Width="250" Height="400" >
-    </Image>
-</Grid>-->
+
+
+
+<!--
+    
+        <Image x:Name="RaceChoiceImgHumanIcon" 
+               Source="/WHeditor;component/Img/HumanIcon.png" 
+               MouseLeftButtonDown="RaceChoiceImgWariorIcon_MouseLeftButtonDown" VerticalAlignment="Top" MouseEnter="MouseTestFunc" HorizontalAlignment="Center" Width="100" Height="100" Margin="99,54,825,0" />
+
+
+
+
+
+
+
+        <Image x:Name="RaceChoiceImgElfIcon" 
+            Source="/WHeditor;component/Img/ElfIcon.png" 
+             Height="120" Margin="99,210,825,0" VerticalAlignment="Top" />
+        <Image x:Name="RaceChoiceImgDwarfIcon" 
+            Source="/WHeditor;component/Img/DwarfIcon.png" 
+            Height="110" Margin="99,374,825,0" VerticalAlignment="Top" />
+        <Image x:Name="RaceChoiceImgHalflingIcon" 
+            Source="/WHeditor;component/Img/HalflingIcon.png" 
+            Height="100" Margin="99,542,825,0" VerticalAlignment="Top" />
+    -->
