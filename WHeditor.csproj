@@ -161,36 +161,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\ElfIconWithBorder.png" />
-    <Resource Include="Images\PageRaseChoice\HalflingIconWithBorder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\DwarfIcon.png" />
-    <Resource Include="Images\PageRaseChoice\ElfIcon.png" />
-    <Resource Include="Images\PageRaseChoice\HalflingIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\DwarfIconWithBorder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\HumanIcon.png" />
-    <Resource Include="Images\PageRaseChoice\HumanIconWithBorder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\WariorImg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\DwarfImg.png" />
-    <Resource Include="Images\PageRaseChoice\HalflingImg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\ElfImg.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\PageRaseChoice\NextPageButton.png" />
     <Resource Include="Images\PageRaseChoice\NextPageButtonWithBorder.png" />
     <Resource Include="Images\PageMenu\oldpaper.jpg" />
     <Resource Include="Images\PageMenu\tlo.jpg" />
+    <Resource Include="Images\PageRaseChoice\ikony\DwarfIcon.png" />
+    <Resource Include="Images\PageRaseChoice\ikony\DwarfIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\ikony\DwarfImg.png" />
+    <Resource Include="Images\PageRaseChoice\ikony\ElfIcon.png" />
+    <Resource Include="Images\PageRaseChoice\ikony\ElfIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\ikony\ElfImg.png" />
+    <Resource Include="Images\PageRaseChoice\ikony\HalflingIcon.png" />
+    <Resource Include="Images\PageRaseChoice\ikony\HalflingIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\ikony\HalflingImg.png" />
+    <Resource Include="Images\PageRaseChoice\ikony\HumanIcon.png" />
+    <Resource Include="Images\PageRaseChoice\ikony\HumanIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\ikony\HumanImg.png" />
     <Content Include="WHPE_db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
