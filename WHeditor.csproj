@@ -117,30 +117,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\ElfIconWithBorder.png" />
-    <Resource Include="Images\PageRaseChoice\HalflingIconWithBorder.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\PageRaseChoice\DwarfIcon.png" />
-    <Resource Include="Images\PageRaseChoice\ElfIcon.png" />
-    <Resource Include="Images\PageRaseChoice\HalflingIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\PageRaseChoice\DwarfIconWithBorder.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="Images\PageRaseChoice\DwarfImg.png" />
+    <Resource Include="Images\PageRaseChoice\ElfIcon.png" />
+    <Resource Include="Images\PageRaseChoice\ElfIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\ElfImg.png" />
+    <Resource Include="Images\PageRaseChoice\HalflingIcon.png" />
+    <Resource Include="Images\PageRaseChoice\HalflingIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\HalflingImg.png" />
     <Resource Include="Images\PageRaseChoice\HumanIcon.png" />
     <Resource Include="Images\PageRaseChoice\HumanIconWithBorder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\WariorImg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\DwarfImg.png" />
-    <Resource Include="Images\PageRaseChoice\HalflingImg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\ElfImg.png" />
+    <Resource Include="Images\PageRaseChoice\HumanImg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
