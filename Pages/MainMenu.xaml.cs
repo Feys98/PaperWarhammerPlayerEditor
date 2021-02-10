@@ -40,6 +40,6 @@ namespace WHeditor
         {
             App.Current.Shutdown();
         }
-
+        //test
     }
 }
