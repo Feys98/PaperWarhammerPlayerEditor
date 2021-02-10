@@ -82,6 +82,9 @@
       <DependentUpon>RaseChoice.xaml</DependentUpon>
     </Compile>
     <Compile Include="Func\Player.cs" />
+    <Compile Include="Pages\ProffesionChoise.xaml.cs">
+      <DependentUpon>ProffesionChoise.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WHPE_dbDataSet.cs">
       <DependentUpon>WHPE_dbDataSet.xsd</DependentUpon>
     </Compile>
@@ -111,6 +114,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\RaseChoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ProffesionChoise.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
