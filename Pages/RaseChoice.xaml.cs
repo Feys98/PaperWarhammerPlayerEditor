@@ -39,7 +39,7 @@ namespace WHeditor
 
         private void RaceChoiceButtonHumanIcon_Click (object sender, RoutedEventArgs e)
         {
-            Player.RaseID = 1;
+            Player.SetRaceID(1);
             RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
             RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/WariorImg.png", UriKind.Relative));
@@ -47,7 +47,7 @@ namespace WHeditor
         }
         private void RaceChoiceButtonElfIcon_Click(object sender, RoutedEventArgs e)
         {
-            Player.RaseID = 2;
+            Player.SetRaceID(2);
 
             RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
@@ -56,7 +56,7 @@ namespace WHeditor
         }
         private void RaceChoiceButtonDwarfIcon_Click(object sender, RoutedEventArgs e)
         {
-            Player.RaseID = 3;
+            Player.SetRaceID(3);
 
             RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
@@ -65,7 +65,7 @@ namespace WHeditor
         }
         private void RaceChoiceButtonHalflingIcon_Click(object sender, RoutedEventArgs e)
         {
-            Player.RaseID = 4;
+            Player.SetRaceID(4);
 
             RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();

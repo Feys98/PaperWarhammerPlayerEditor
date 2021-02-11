@@ -25,7 +25,7 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="1">
-                <Label Content="Profesion Roll"  
+                <Label Content="Proffesion Roll"  
                        Margin="0" 
                        Height="50" Width="300" 
                        HorizontalAlignment="Center" VerticalAlignment="Center" 
@@ -50,22 +50,38 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0">
-                        <Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="50"/>
+                        <Button x:Name="ProffesionChoiceButtonChoice1"
+                                Content="Button" 
+                                HorizontalAlignment="Center" VerticalAlignment="Center"
+                                Width="200" Height="50" 
+                                Click="ProffesionChoiceButtonChoice1_Click"
+                                Visibility="Hidden"
+                                />
 
                     </Grid>
 
                     <Grid Grid.Row="1">
-                        <Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="50"/>
+                        <Button x:Name="ProffesionChoiceButtonChoice2" 
+                                Content="Button" HorizontalAlignment="Center" 
+                                VerticalAlignment="Center" Width="200" Height="50" 
+                                Click="ProffesionChoiceButtonChoice2_Click"
+                                Visibility="Hidden"/>
 
                     </Grid>
 
                     <Grid Grid.Row="2">
-                        <Button Content="Button" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50"/>
+                        <Button x:Name="ProffesionChoiceButtonChoice3" 
+                                Content="Button" Width="200" 
+                                HorizontalAlignment="Center" VerticalAlignment="Center"
+                                Height="50" 
+                                Click="ProffesionChoiceButtonChoice3_Click"
+                                Visibility="Hidden"
+                                />
 
                     </Grid>
 
                     <Grid Grid.Row="3">
-                        <Image Height="250" Width="250"/>
+                        <Image x:Name="ProffesionRollProffesionImage" Height="250" Width="250"/>
 
                     </Grid>
 
@@ -82,7 +98,11 @@
 
                     </Grid>
                     <Grid Grid.Row="1">
-                        <Button Content="Button" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="200"/>
+                        <Button x:Name="ProffesionChoiceButtonDiceRoll" 
+                                Content="DICE_ROLL"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center" Width="200" Height="200"
+                                Click="ProffesionChoiceButtonDiceRoll_Click"/>
 
                     </Grid>
                     <Grid Grid.Row="2">
