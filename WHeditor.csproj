@@ -172,6 +172,7 @@
     <Resource Include="Images\PageRaseChoice\HumanImg.png" />
     <Resource Include="Images\PageProfession\ProfessionIMG1.png" />
     <Resource Include="Images\PageProfession\ProfessionIMG2.png" />
+    <Resource Include="Images\PageProfession\ProfessionIMG3.png" />
     <Content Include="WHPE_db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
