@@ -81,7 +81,7 @@
                     </Grid>
 
                     <Grid Grid.Row="3">
-                        <Image x:Name="ProffesionRollProffesionImage" Height="250" Width="250"/>
+                        <Image x:Name="ProffesionRollProffesionImage" Width="250" Margin="33,12,32.333,-38" Height="300"/>
 
                     </Grid>
 

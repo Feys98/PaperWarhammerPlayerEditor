@@ -38,7 +38,7 @@ namespace WHeditor
                 ProffesionChoiceButtonChoice1.Content = "ProffesionNameNo.1"; //TODO
 
 
-                Player.SetProffesionID(RollValue)
+                Player.SetProffesionID(RollValue);
 
             }
             if (Roll == 2)
