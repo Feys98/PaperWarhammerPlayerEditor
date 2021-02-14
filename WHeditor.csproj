@@ -82,9 +82,6 @@
       <DependentUpon>RaseChoice.xaml</DependentUpon>
     </Compile>
     <Compile Include="Func\Player.cs" />
-    <Compile Include="Pages\ProffChoice.xaml.cs">
-      <DependentUpon>ProffChoice.xaml</DependentUpon>
-    </Compile>
     <Compile Include="WHPE_dbDataSet.cs">
       <DependentUpon>WHPE_dbDataSet.xsd</DependentUpon>
     </Compile>
@@ -114,10 +111,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\RaseChoice.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\ProffChoice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,18 +158,18 @@
     <Resource Include="Images\PageRaseChoice\NextPageButtonWithBorder.png" />
     <Resource Include="Images\PageMenu\oldpaper.jpg" />
     <Resource Include="Images\PageMenu\tlo.jpg" />
-    <Resource Include="Images\PageRaseChoice\ikony\DwarfIcon.png" />
-    <Resource Include="Images\PageRaseChoice\ikony\DwarfIconWithBorder.png" />
-    <Resource Include="Images\PageRaseChoice\ikony\DwarfImg.png" />
-    <Resource Include="Images\PageRaseChoice\ikony\ElfIcon.png" />
-    <Resource Include="Images\PageRaseChoice\ikony\ElfIconWithBorder.png" />
-    <Resource Include="Images\PageRaseChoice\ikony\ElfImg.png" />
-    <Resource Include="Images\PageRaseChoice\ikony\HalflingIcon.png" />
-    <Resource Include="Images\PageRaseChoice\ikony\HalflingIconWithBorder.png" />
-    <Resource Include="Images\PageRaseChoice\ikony\HalflingImg.png" />
-    <Resource Include="Images\PageRaseChoice\ikony\HumanIcon.png" />
-    <Resource Include="Images\PageRaseChoice\ikony\HumanIconWithBorder.png" />
-    <Resource Include="Images\PageRaseChoice\ikony\HumanImg.png" />
+    <Resource Include="Images\PageRaseChoice\DwarfIcon.png" />
+    <Resource Include="Images\PageRaseChoice\DwarfIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\DwarfImg.png" />
+    <Resource Include="Images\PageRaseChoice\ElfIcon.png" />
+    <Resource Include="Images\PageRaseChoice\ElfIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\ElfImg.png" />
+    <Resource Include="Images\PageRaseChoice\HalflingIcon.png" />
+    <Resource Include="Images\PageRaseChoice\HalflingIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\HalflingImg.png" />
+    <Resource Include="Images\PageRaseChoice\HumanIcon.png" />
+    <Resource Include="Images\PageRaseChoice\HumanIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\HumanImg.png" />
     <Content Include="WHPE_db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -42,7 +42,7 @@ namespace WHeditor
             Player.RaseID = 1;
             RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
-            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/WariorImg.png", UriKind.Relative));
+            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/HumanImg.png", UriKind.Relative));
             RaseChoiceButtonNextPage.Visibility = Visibility.Visible;
         }
         private void RaceChoiceButtonElfIcon_Click(object sender, RoutedEventArgs e)
@@ -75,7 +75,7 @@ namespace WHeditor
 
         private void RaceChoiceButtonNexyPage_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ProffChoice());
+            
         }
     }
 }
