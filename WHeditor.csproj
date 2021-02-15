@@ -83,8 +83,8 @@
       <DependentUpon>RaseChoice.xaml</DependentUpon>
     </Compile>
     <Compile Include="Func\Player.cs" />
-    <Compile Include="Pages\ProffesionChoice.xaml.cs">
-      <DependentUpon>ProffesionChoice.xaml</DependentUpon>
+    <Compile Include="Pages\ProfessionChoice.xaml.cs">
+      <DependentUpon>ProfessionChoice.xaml</DependentUpon>
     </Compile>
     <Compile Include="Func\ProfessionRollValue.cs" />
     <Compile Include="WHPE_dbDataSet.cs">
@@ -119,7 +119,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\ProffesionChoice.xaml">
+    <Page Include="Pages\ProfessionChoice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -191,6 +191,8 @@
   <ItemGroup>
     <Resource Include="Images\PageRaseChoice\NextPageButton.png" />
     <Resource Include="Images\PageRaseChoice\NextPageButtonWithBorder.png" />
+    <Resource Include="Images\PageProfessionChoice\Dice1.jpg" />
+    <Resource Include="Images\PageProfessionChoice\Dice2.jpg" />
     <Content Include="WHPE_db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

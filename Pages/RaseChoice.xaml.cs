@@ -75,7 +75,7 @@ namespace WHeditor
 
         private void RaceChoiceButtonNexyPage_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ProffesionChoice());
+            NavigationService.Navigate(new ProfessionChoice());
         }
     }
 }

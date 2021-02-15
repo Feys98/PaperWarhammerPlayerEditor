@@ -98,5 +98,25 @@ namespace WHeditor
         {
             return (DataBaseReader.Get1StringValue($"Select RaseDescription From Rase Where id = '{Player.RaseID}'"));
         }
+        public static string GetProfessionName(int professionID)
+        {
+            return (DataBaseReader.Get1StringValue($"Select ProfessoinName From Professions Where id = '{professionID}'"));
+        }
+        public static string GetProfessionDescription(int professionID)
+        {
+            return (DataBaseReader.Get1StringValue($"Select ProfessionDescription From Professions Where id = '{professionID}'"));
+        }
+        public static string GetProfessionAbilities (int professionID)
+        {
+            return (DataBaseReader.Get1StringValue($"Select ProfessionAbilities From Professions Where id = '{professionID}'"));
+        }
+        public static string GetProfessionSkills(int professionID)
+        {
+            return (DataBaseReader.Get1StringValue($"Select ProfessionSkills From Professions Where id = '{professionID}'"));
+        }
+        public static string GetProfessionEQ(int professionID)
+        {
+            return (DataBaseReader.Get1StringValue($"Select ProfessionEQ From Professions Where id = '{professionID}'"));
+        }
     }
 }
