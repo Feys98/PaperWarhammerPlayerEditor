@@ -21,14 +21,6 @@ using Dapper;
 
 namespace WHeditor
 {
-    /// <summary>
-    /// Logika interakcji dla klasy RaseChoice.xaml
-    /// </summary>
-    /// 
-
-
-
-
     public partial class RaseChoice : Page
     {
         public RaseChoice()
@@ -73,9 +65,19 @@ namespace WHeditor
             RaseChoiceButtonNextPage.Visibility = Visibility.Visible;
         }
 
+
+
         private void RaceChoiceButtonNexyPage_Click(object sender, RoutedEventArgs e)
         {
+
+            Player.SetAttributes(DataBaseReader.GetArrayOfRaseAttributes());
+
+
+
             NavigationService.Navigate(new ProfessionChoice());
+
+
+
         }
     }
 }

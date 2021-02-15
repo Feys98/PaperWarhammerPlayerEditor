@@ -13,7 +13,7 @@ namespace WHeditor
         public static int RaseID { get; private set; }
         public static int ProffesionID { get; private set; }
 
-
+        public static int[] Attributes { get; set; } = new int[16];
 
         public static void SetRaceID(int value)
         {
@@ -22,6 +22,14 @@ namespace WHeditor
         public static void SetProffesionID(int value)
         {
             ProffesionID = value;
+        }
+
+        public static void SetAttributes(int[]at)
+        {
+            for (int i = 0; i < 16; i++)
+            {
+                Attributes[i] = at[i];
+            }
         }
 
     }

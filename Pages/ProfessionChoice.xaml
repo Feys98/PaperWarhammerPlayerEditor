@@ -461,27 +461,35 @@
 
                                 <Grid Grid.Column="0">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="WWValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                                 <Grid Grid.Column="1">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="USValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                                 <Grid Grid.Column="2">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="KValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                                 <Grid Grid.Column="3">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="OdpValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                                 <Grid Grid.Column="4">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="ZrValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                                 <Grid Grid.Column="5">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="IntValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                                 <Grid Grid.Column="6">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="SWValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                                 <Grid Grid.Column="7">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="OgdValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                             </Grid>
                             <Grid Grid.Row="3">
@@ -561,27 +569,35 @@
 
                                 <Grid Grid.Column="0">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="AValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                                 <Grid Grid.Column="1">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="ZywValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                                 <Grid Grid.Column="2">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="SValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                                 <Grid Grid.Column="3">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="WtValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                                 <Grid Grid.Column="4">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="SzValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                                 <Grid Grid.Column="5">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="MagValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                                 <Grid Grid.Column="6">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="POValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                                 <Grid Grid.Column="7">
                                     <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label x:Name="PPValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
                                 </Grid>
                             </Grid>
                         </Grid>

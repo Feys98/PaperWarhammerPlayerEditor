@@ -12,6 +12,8 @@ namespace WHeditor
     public static class DataBaseReader
     {
         private static string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\WHPE_db.mdf;Integrated Security=True";
+
+        static string[] ArrayOfAttributesString = {"WW","US","K","Odp","Zr","Int","SW","Ogd","A","Zyw","S","Wt","Sz","Mag","PO","PP"};
         public static string ConnectionString
         {
             get { return connectionString; }
@@ -72,6 +74,10 @@ namespace WHeditor
             if (dataReader.HasRows)
             {
                 dataReader.Read();
+                if (dataReader.IsDBNull(0))
+                {
+                    return 0;
+                }
                 var Output = dataReader.GetInt32(0);
                 return Output;
             }
@@ -86,7 +92,28 @@ namespace WHeditor
 
         //--------------------------------
 
+        public static int[] GetArrayOfRaseAttributes()
+        {
+            int[] arr = new int[16];
 
+            for (int i = 0; i < 16; i++)
+            {
+                arr[i] = DataBaseReader.Get1IntValue($"SELECT {ArrayOfAttributesString[i]} FROM RaseAttributes WHERE ID = '{Player.RaseID}'");
+            }
+
+            return arr;
+        }
+        public static int[] GetArrayOfProfessionAttributes(int ID)
+        {
+            int[] arr = new int[16];
+
+            for (int i = 0; i < 16; i++)
+            {
+                arr[i] = DataBaseReader.Get1IntValue($"SELECT {ArrayOfAttributesString[i]} FROM ProfessionsAttributes WHERE ID = '{ID}'");
+            }
+
+            return arr;
+        }
         public static string GetRaseName()
         {
             return (DataBaseReader.Get1StringValue($"SELECT RaseName From Rase Where ID = '{Player.RaseID}'"));
@@ -117,7 +144,7 @@ namespace WHeditor
         }
         public static string GetProfessionUpgrades(int professionID)
         {
-            return (DataBaseReader.Get1StringValue($"Select ProfessionUpgrades From Professions Where id = '{professionID}'"));
+            return (DataBaseReader.Get1StringValue($"Select ProfessionsUpgrades From Professions Where id = '{professionID}'"));
         }
     }
 }
