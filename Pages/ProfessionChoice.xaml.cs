@@ -20,6 +20,13 @@ namespace WHeditor
     /// </summary>
     public partial class ProfessionChoice : Page
     {
+        private string GetDescription(int _professionID)
+        {
+            return $"Umiejętności:\n{DataBaseReader.GetProfessionAbilities(_professionID)}\n" +
+                $"Zdolności:\n{DataBaseReader.GetProfessionAbilities(_professionID)}\n" +
+                $"Wyposażenie:\n{DataBaseReader.GetProfessionEQ(_professionID)}\n" +
+                $"Profesje wyjściowe:\n{DataBaseReader.GetProfessionUpgrades(_professionID)}";
+        }
         private int roll = 0;
         private int button = 0 ;
         private int professionID,profesionID1, profesionID2, profesionID3;
@@ -38,7 +45,7 @@ namespace WHeditor
                 profesionID1 = ProfessionRollValue.RollProfessionAndGetID();
 
                 ProfessionChoiceButtonChoice1.Visibility = Visibility.Visible;
-                ProfessionChoiceButtonChoice1.Content = profesionID1.ToString(); //TODO
+                ProfessionChoiceButtonChoice1.Content = DataBaseReader.GetProfessionName(profesionID1);
         
 
             }
@@ -50,7 +57,7 @@ namespace WHeditor
                 } while (profesionID2 == profesionID1);
 
                 ProfessionChoiceButtonChoice2.Visibility = Visibility.Visible;
-                ProfessionChoiceButtonChoice2.Content = profesionID2.ToString(); //TODO
+                ProfessionChoiceButtonChoice2.Content = DataBaseReader.GetProfessionName(profesionID2); //TODO
             }
             if (roll == 3)
             {
@@ -61,7 +68,7 @@ namespace WHeditor
                 } while (profesionID3 == profesionID1 && profesionID3 == profesionID2);
 
                 ProfessionChoiceButtonChoice3.Visibility = Visibility.Visible;
-                ProfessionChoiceButtonChoice3.Content = profesionID3.ToString(); //TODO
+                ProfessionChoiceButtonChoice3.Content = DataBaseReader.GetProfessionName(profesionID3); //TODO
                 ProfessionChoiceButtonDiceRoll.Visibility = Visibility.Hidden;
             }
         }
@@ -74,6 +81,11 @@ namespace WHeditor
             ProfessionChoiceButtonNextPage.Visibility = Visibility.Visible;
             button = 1;
             professionID = profesionID1;
+
+            ProfessionChoiceTextBlock.Text = GetDescription(professionID);
+
+
+
         }
 
         private void ProfessionChoiceButtonChoice2_Click(object sender, RoutedEventArgs e)

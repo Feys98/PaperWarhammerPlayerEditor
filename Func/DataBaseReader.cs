@@ -86,29 +86,26 @@ namespace WHeditor
 
         //--------------------------------
 
-        public static int GetRaseID()
-        {
-            return (DataBaseReader.Get1IntValue($"Select ID From Rase Where id = '{Player.RaseID}'"));
-        }
+
         public static string GetRaseName()
         {
-            return (DataBaseReader.Get1StringValue($"Select RaseName From Rase Where id = '{Player.RaseID}'"));
+            return (DataBaseReader.Get1StringValue($"SELECT RaseName From Rase Where ID = '{Player.RaseID}'"));
         }
         public static string GetRaseDescription()
         {
-            return (DataBaseReader.Get1StringValue($"Select RaseDescription From Rase Where id = '{Player.RaseID}'"));
+            return (DataBaseReader.Get1StringValue($"SELECT RaseDescrioption From Rase Where id = '{Player.RaseID}'"));
         }
         public static string GetProfessionName(int professionID)
         {
-            return (DataBaseReader.Get1StringValue($"Select ProfessoinName From Professions Where id = '{professionID}'"));
+            return (DataBaseReader.Get1StringValue($"Select ProfessionName From Professions Where id = '{professionID}'"));
         }
-        public static string GetProfessionDescription(int professionID)
+        //public static string GetProfessionDescription(int professionID)
+        //{
+        //    return (DataBaseReader.Get1StringValue($"Select ProfessionDescription From Professions Where id = '{professionID}'"));
+        //}
+        public static string GetProfessionAbilities(int professionID)
         {
-            return (DataBaseReader.Get1StringValue($"Select ProfessionDescription From Professions Where id = '{professionID}'"));
-        }
-        public static string GetProfessionAbilities (int professionID)
-        {
-            return (DataBaseReader.Get1StringValue($"Select ProfessionAbilities From Professions Where id = '{professionID}'"));
+            return (DataBaseReader.Get1StringValue($"Select ProfessionAbilites From Professions Where id = '{professionID}'"));
         }
         public static string GetProfessionSkills(int professionID)
         {
@@ -117,6 +114,10 @@ namespace WHeditor
         public static string GetProfessionEQ(int professionID)
         {
             return (DataBaseReader.Get1StringValue($"Select ProfessionEQ From Professions Where id = '{professionID}'"));
+        }
+        public static string GetProfessionUpgrades(int professionID)
+        {
+            return (DataBaseReader.Get1StringValue($"Select ProfessionUpgrades From Professions Where id = '{professionID}'"));
         }
     }
 }
