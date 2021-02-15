@@ -85,6 +85,7 @@
     <Compile Include="Pages\ProffesionChoice.xaml.cs">
       <DependentUpon>ProffesionChoice.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Func\ProfessionRollValue.cs" />
     <Compile Include="WHPE_dbDataSet.cs">
       <DependentUpon>WHPE_dbDataSet.xsd</DependentUpon>
     </Compile>
