@@ -15,7 +15,6 @@ namespace WHeditor
 
 
 
-
         public static void SetRaceID(int value)
         {
             RaseID = value;

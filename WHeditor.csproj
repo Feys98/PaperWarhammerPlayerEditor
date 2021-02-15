@@ -78,6 +78,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Func\DataBaseReader.cs" />
+    <Compile Include="Func\OutOfRollRangeException.cs" />
     <Compile Include="Pages\RaseChoice.xaml.cs">
       <DependentUpon>RaseChoice.xaml</DependentUpon>
     </Compile>
