@@ -9,7 +9,7 @@ namespace WHeditor
     
     public static class Player
     {
-        private static int raseID = 0;
+
         public static int RaseID { get; private set; }
         public static int ProffesionID { get; private set; }
 
@@ -18,7 +18,7 @@ namespace WHeditor
 
         public static void SetRaceID(int value)
         {
-            raseID = value;
+            RaseID = value;
         }
         public static void SetProffesionID(int value)
         {
