@@ -174,18 +174,6 @@
     <Resource Include="Images\PageRaseChoice\NextPageButtonWithBorder.png" />
     <Resource Include="Images\PageProfessionChoice\Dice1.jpg" />
     <Resource Include="Images\PageProfessionChoice\Dice2.jpg" />
-    <Resource Include="Images\PageRaseChoice\DwarfIcon.png" />
-    <Resource Include="Images\PageRaseChoice\DwarfIconWithBorder.png" />
-    <Resource Include="Images\PageRaseChoice\DwarfImg.png" />
-    <Resource Include="Images\PageRaseChoice\ElfIcon.png" />
-    <Resource Include="Images\PageRaseChoice\ElfIconWithBorder.png" />
-    <Resource Include="Images\PageRaseChoice\ElfImg.png" />
-    <Resource Include="Images\PageRaseChoice\HalflingIcon.png" />
-    <Resource Include="Images\PageRaseChoice\HalflingIconWithBorder.png" />
-    <Resource Include="Images\PageRaseChoice\HalflingImg.png" />
-    <Resource Include="Images\PageRaseChoice\HumanIcon.png" />
-    <Resource Include="Images\PageRaseChoice\HumanIconWithBorder.png" />
-    <Resource Include="Images\PageRaseChoice\HumanImg.png" />
     <Resource Include="Images\Menu\Pergamin.jpg" />
     <Resource Include="Images\Menu\Tło.jpg" />
     <Resource Include="Images\Professions\ProfessionIMG1.png" />
@@ -248,6 +236,18 @@
     <Resource Include="Images\Professions\ProfessionIMG58.png" />
     <Resource Include="Images\Professions\ProfessionIMG59.png" />
     <Resource Include="Images\Professions\ProfessionIMG60.png" />
+    <Resource Include="Images\PageRaseChoice\DwarfIcon.png" />
+    <Resource Include="Images\PageRaseChoice\DwarfIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\DwarfImg.png" />
+    <Resource Include="Images\PageRaseChoice\ElfIcon.png" />
+    <Resource Include="Images\PageRaseChoice\ElfIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\ElfImg.png" />
+    <Resource Include="Images\PageRaseChoice\HalflingIcon.png" />
+    <Resource Include="Images\PageRaseChoice\HalflingIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\HalflingImg.png" />
+    <Resource Include="Images\PageRaseChoice\HumanIcon.png" />
+    <Resource Include="Images\PageRaseChoice\HumanIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\HumanImg.png" />
     <Content Include="WHPE_db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
