@@ -187,6 +187,7 @@
     <Resource Include="Images\PageRaseChoice\HumanIconWithBorder.png" />
     <Resource Include="Images\PageRaseChoice\HumanImg.png" />
     <Resource Include="Images\Menu\Pergamin.jpg" />
+    <Resource Include="Images\Menu\Tło.jpg" />
     <Content Include="WHPE_db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
