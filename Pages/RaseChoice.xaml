@@ -390,32 +390,30 @@
                             <RowDefinition Height="1*"/>
                         </Grid.RowDefinitions>
                         <Grid Grid.Row="0">
-                            <Border BorderBrush="Black" BorderThickness="4" Opacity="0.75" Margin="4">
+                            <Border BorderBrush="Black" BorderThickness="4" Opacity="0.85" Margin="4">
                                 <Border.Background>
                                     <ImageBrush ImageSource="/WHeditor;component/Images/Menu/Pergamin.jpg"/>
                                 </Border.Background>
                             </Border>
 
                             <TextBlock x:Name="RaseChoiceTextBlockRaseDescription" 
-                                   Text="LoriumIpsium LoriumIpsiumLoriumI psiumLoriumIpsiu mLoriumIp siumLoriumIpsiumL oriumIpsiumLo riumIp siumL oriumIpsiumL oriumIps iumLoriumIpsiumLori
-                                   umIpsiumLori umIpsiumL oriumIpsiumLoriumI psiLoriumIp siumLoriumIp siumLoriumIps ium Lorium IpsiumLorium Ilk;lk;l ;lk;lk;l ;lk ;lk; lk; lk;kl;k ;lk;lk;umum"
-                           Margin="10"
+                                   
+                           Margin="10" VerticalAlignment="Center"
                            TextWrapping="Wrap" FontFamily="Times New Roman" FontSize="18" TextAlignment="Center"/>
                         </Grid>
 
 
                         <Grid Grid.Row="1">
-                            <Border BorderBrush="Black" BorderThickness="4" Opacity="0.75" Margin="4">
+                            <Border BorderBrush="Black" BorderThickness="4" Opacity="0.85" Margin="4">
                                 <Border.Background>
                                     <ImageBrush ImageSource="/WHeditor;component/Images/Menu/Pergamin.jpg"/>
                                 </Border.Background>
                             </Border>
 
-                            <TextBlock x:Name="RaseChoiceTextBlockRaseSkillsAndAbbilities" 
-                                   Text="LoriumIpsium LoriumIpsiumLoriumI psiumLoriumIpsiu mLoriumIp siumLoriumIpsiumL oriumIpsiumLo riumIp siumL oriumIpsiumL oriumIps iumLoriumIpsiumLori
-                                   umIpsiumLori umIpsiumL oriumIpsiumLoriumI psiLoriumIp siumLoriumIp siumLoriumIps ium Lorium IpsiumLorium Ilk;lk;l ;lk;lk;l ;lk ;lk; lk; lk;kl;k ;lk;lk;umum"
-                           Margin="10"
-                           TextWrapping="Wrap" FontFamily="Times New Roman" FontSize="18" TextAlignment="Center"/>
+                            <TextBlock x:Name="RaseChoiceTextBlockRaseSkillsAndAbbilities"  
+                           Margin="5" VerticalAlignment="Center"
+                           TextWrapping="Wrap" FontFamily="Times New Roman" FontSize="18" TextAlignment="Center" FontWeight="Bold">
+                                <Run Text="ZDOLNOŚCI:"/><LineBreak/><Run x:Name="zd1" FontWeight="Normal" Text=""/><LineBreak/><Run Text="UMIEJETNOSCI:"/><LineBreak/><Run x:Name="zd2" FontWeight="Normal" Text=""/></TextBlock>
 
                         </Grid>
                     </Grid>
@@ -429,6 +427,7 @@
                             <Border x:Name="IMGBorder" BorderBrush="White" BorderThickness="4" Background="#FFBAB6B6" Opacity="0.85" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                                 <Image x:Name="RaseChoiceImageRaseImg" 
                                Margin="0,0,0,0" 
+                               
                                Width="250" Height="400" />
                             </Border>
                         </Grid>

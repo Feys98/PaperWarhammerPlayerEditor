@@ -32,11 +32,14 @@ namespace WHeditor
 
         private void RaseAbbAndSkills()
         {
-            RaseChoiceTextBlockRaseSkillsAndAbbilities.Text = 
-                $"Zdolności:\n" +
-                $"{DataBaseReader.GetRaseAbilites()}\n" +
-                $"Umiejętności:\n" +
-                $"{DataBaseReader.GetRaseSkills()}";
+            //RaseChoiceTextBlockRaseSkillsAndAbbilities.Text = 
+            //    $"Zdolności:\n" +
+            //    $"{DataBaseReader.GetRaseAbilites()}\n" +
+            //    $"Umiejętności:\n" +
+            //    $"{DataBaseReader.GetRaseSkills()}";
+
+            zd1.Text = $"{DataBaseReader.GetRaseAbilites()}";
+            zd2.Text = $"{DataBaseReader.GetRaseSkills()}";
         }
 
         private void RaceChoiceButtonHumanIcon_Click (object sender, RoutedEventArgs e)
