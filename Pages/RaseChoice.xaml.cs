@@ -25,16 +25,27 @@ namespace WHeditor
     {
         public RaseChoice()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            RaseChoiceButtonNextPage.Visibility = Visibility.Hidden;
+            IMGBorder.Visibility = Visibility.Hidden;
         }
 
+        private void RaseAbbAndSkills()
+        {
+            RaseChoiceTextBlockRaseSkillsAndAbbilities.Text = 
+                $"Zdolności:\n" +
+                $"{DataBaseReader.GetRaseAbilites()}\n" +
+                $"Umiejętności:\n" +
+                $"{DataBaseReader.GetRaseSkills()}";
+        }
 
         private void RaceChoiceButtonHumanIcon_Click (object sender, RoutedEventArgs e)
         {
             Player.SetRaceID(1);
             RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
-            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/HumanImg.png", UriKind.Relative));
+            RaseAbbAndSkills();
+            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/HumanImg.png", UriKind.Relative)); IMGBorder.Visibility = Visibility.Visible;
             RaseChoiceButtonNextPage.Visibility = Visibility.Visible;
         }
         private void RaceChoiceButtonElfIcon_Click(object sender, RoutedEventArgs e)
@@ -43,7 +54,8 @@ namespace WHeditor
 
             RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
-            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/ElfImg.png", UriKind.Relative));
+            RaseAbbAndSkills();
+            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/ElfImg.png", UriKind.Relative)); IMGBorder.Visibility = Visibility.Visible;
             RaseChoiceButtonNextPage.Visibility = Visibility.Visible;
         }
         private void RaceChoiceButtonDwarfIcon_Click(object sender, RoutedEventArgs e)
@@ -52,16 +64,18 @@ namespace WHeditor
 
             RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
-            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/DwarfImg.png", UriKind.Relative));
+            RaseAbbAndSkills();
+            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/DwarfImg.png", UriKind.Relative)); IMGBorder.Visibility = Visibility.Visible;
             RaseChoiceButtonNextPage.Visibility = Visibility.Visible;
         }
         private void RaceChoiceButtonHalflingIcon_Click(object sender, RoutedEventArgs e)
         {
             Player.SetRaceID(4);
 
-            RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
+            RaseChoiceTextBlockRaseName.Text = "Niziołek";
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
-            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/HalflingImg.png", UriKind.Relative));
+            RaseAbbAndSkills();
+            RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/HalflingImg.png", UriKind.Relative)); IMGBorder.Visibility = Visibility.Visible;
             RaseChoiceButtonNextPage.Visibility = Visibility.Visible;
         }
 

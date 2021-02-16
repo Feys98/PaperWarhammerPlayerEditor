@@ -194,9 +194,9 @@
                             <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Border>
                         <ControlTemplate.Triggers>
-                            
-                            
-                            
+
+
+
 
                             <Trigger Property="IsDefaulted" Value="true">
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
@@ -246,13 +246,17 @@
 
                 </Grid>
                 <Grid  Grid.Column="1">
-                    <Border BorderBrush="Black" BorderThickness="2" Margin="80,5" Background="#FFB6B5B5"/>
-                    <Label Content="Profession Roll"  
-                       Margin="0,0,0,10" 
-                       Height="50" Width="300" 
+                    <Border BorderBrush="Black" BorderThickness="2" Margin="80,5">
+                        <Border.Background>
+                            <SolidColorBrush Color="#FFB6B5B5" Opacity="0.75"/>
+                        </Border.Background>
+                    </Border>
+                    <Label Content="Losowanie Profesji"  
+                       Margin="0" 
+                       Height="63" Width="300" 
                        HorizontalAlignment="Center" VerticalAlignment="Center" 
                        HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                       FontSize="36" Grid.Column="1"/>
+                       FontSize="36" FontFamily="Times New Roman"/>
                 </Grid>
                 <Grid  Grid.Column="2">
 
@@ -277,52 +281,73 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0">
-                        <Border BorderBrush="Black" BorderThickness="2"  Background="#FFB6B5B5"/>
+                        <Border BorderBrush="Black" BorderThickness="2">
+                            <Border.Background>
+                                <SolidColorBrush Color="#FFB6B5B5" Opacity="0.75"/>
+                            </Border.Background>
+                        </Border>
                         <Button x:Name="ProfessionChoiceButtonChoice1"
                                 Content="Button" 
                                 HorizontalAlignment="Center" VerticalAlignment="Center"
                                 Width="200" Height="50" 
                                 Click="ProfessionChoiceButtonChoice1_Click"
                                 Visibility="Visible" Style="{DynamicResource Button1Style}"
-                                BorderBrush="Black" BorderThickness="4">
-                            
-                        </Button>
+                                BorderBrush="Black" BorderThickness="4" FontSize="20" FontFamily="Times New Roman"/>
 
                     </Grid>
 
                     <Grid Grid.Row="1">
-                        <Border BorderBrush="Black" BorderThickness="2"  Background="#FFB6B5B5"/>
+                        <Border BorderBrush="Black" BorderThickness="2">
+                            <Border.Background>
+                                <SolidColorBrush Color="#FFB6B5B5" Opacity="0.75"/>
+                            </Border.Background>
+                        </Border>
                         <Button x:Name="ProfessionChoiceButtonChoice2" 
                                 Content="Button" HorizontalAlignment="Center" 
                                 VerticalAlignment="Center" Width="200" Height="50" 
                                 Click="ProfessionChoiceButtonChoice2_Click"
                                 Visibility="Visible" Style="{DynamicResource Button2Style}"
-                                BorderBrush="Black" BorderThickness="4">
-                            
+                                BorderBrush="Black" BorderThickness="4" FontSize="20" FontFamily="Times New Roman">
+
                         </Button>
-                                
+
 
                     </Grid>
 
                     <Grid Grid.Row="2">
-                        <Border BorderBrush="Black" BorderThickness="2"  Background="#FFB6B5B5"/>
+                        <Border BorderBrush="Black" BorderThickness="2">
+                            <Border.Background>
+                                <SolidColorBrush Color="#FFB6B5B5" Opacity="0.75"/>
+                            </Border.Background>
+                        </Border>
                         <Button x:Name="ProfessionChoiceButtonChoice3" 
                                 Content="Button" Width="200" 
                                 HorizontalAlignment="Center" VerticalAlignment="Center"
                                 Height="50" 
                                 Click="ProfessionChoiceButtonChoice3_Click"
                                 Visibility="Visible" Style="{DynamicResource Button3Style}"
-                                BorderBrush="Black" BorderThickness="4">
-                            
+                                BorderBrush="Black" BorderThickness="4" FontSize="20" FontFamily="Times New Roman">
+
                         </Button>
-                                
+
 
                     </Grid>
 
                     <Grid Grid.Row="3">
-                        <Border BorderBrush="Black" BorderThickness="2"  Background="#FFB6B5B5"/>
-                        <Image x:Name="ProfessionRollProfessionImage" Width="250" Margin="0,0,0,0" Height="300"/>
-
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Border BorderBrush="Black" BorderThickness="2">
+                            <Border.Background>
+                                <SolidColorBrush Color="#FFB6B5B5" Opacity="0.75"/>
+                            </Border.Background>
+                        </Border>
+                        <Grid>
+                            <Border x:Name="IMGBorder" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image x:Name="ProfessionRollProfessionImage" Width="200" Margin="0,0,0,0" Height="300"/>
+                            </Border>
+                        </Grid>
                     </Grid>
 
                 </Grid>
@@ -334,8 +359,12 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0">
-                        <Border BorderBrush="Black" BorderThickness="2" Margin="5,0,5,12" Background="#FFB6B5B5"/>
-                        <TextBlock TextWrapping="Wrap" Text="Profession Name" Margin="0,0,0,11" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
+                        <Border BorderBrush="Black" BorderThickness="2" Margin="5,0,5,12">
+                            <Border.Background>
+                                <SolidColorBrush Color="#FFB6B5B5" Opacity="0.75"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock x:Name="ProfessionName" TextWrapping="Wrap" Text="Wylosuj Profesję" Margin="0,0,0,11" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Times New Roman"/>
 
                     </Grid>
                     <Grid Grid.Row="1">
@@ -354,14 +383,14 @@
 
                     </Grid>
                     <Grid Grid.Row="2">
-                        <Border BorderBrush="Black" BorderThickness="2" Margin="5,0" Background="#FFB6B5B5"/>
+
                         <Button x:Name="ProfessionChoiceButtonNextPage" 
-                            Content="NextPage" 
+                            Content="Następna Strona" 
                             Width="200" Height="50" 
                             Click="ProfessionChoiceButtonNextPage_Click"
                             Visibility="Visible" Style="{DynamicResource NextPageButtonStyle}"
-                            BorderBrush="Black" BorderThickness="4">
-                            
+                            BorderBrush="Black" BorderThickness="4" FontFamily="Times New Roman" FontSize="22">
+
                         </Button>
                     </Grid>
 
@@ -380,7 +409,10 @@
 
 
                     <Border BorderBrush="Black" BorderThickness="2">
-                        <Grid Grid.Row="0" Background="#FFA59F9F">
+                        <Grid Grid.Row="0">
+                            <Grid.Background>
+                                <SolidColorBrush Color="#FFA59F9F" Opacity="0.75"/>
+                            </Grid.Background>
 
                             <Grid.RowDefinitions>
                                 <RowDefinition  Height="1*"/>
@@ -605,7 +637,10 @@
 
 
                     <Grid Grid.Row="3">
-                        <Border BorderBrush="Black" BorderThickness="2" Background="#FFF6E8D7">
+                        <Border BorderBrush="Black" BorderThickness="2">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/WHeditor;component/Images/Menu/Pergamin.jpg" Opacity="0.75"/>
+                            </Border.Background>
                             <TextBlock x:Name="ProfessionChoiceTextBlock" TextWrapping="Wrap" Text="OPIS XD" Margin="10"/>
                         </Border>
                     </Grid>

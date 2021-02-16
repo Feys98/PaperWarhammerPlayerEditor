@@ -212,12 +212,12 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource RaseChoiceNextPageButtonWithBorder}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="Black"/>
+
+                                <Setter Property="BorderBrush" TargetName="border" Value="white"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                                <Setter Property="Background" TargetName="border" Value="Gray"/>
+
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
                                 <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
@@ -231,23 +231,33 @@
         </Style>
     </Page.Resources>
 
-    <Grid  Width="auto" Height="auto" >
+    <Grid>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.7*"/>
             <RowDefinition Height="6*"/>
-            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="0.7*"/>
         </Grid.RowDefinitions>
 
         <!--titleRow-->
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Border BorderBrush="Black" BorderThickness="4" Background="#FFBAB6B6" Opacity="0.75"/>
+                <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Wybór Rasy" VerticalAlignment="Center" FontSize="48" FontFamily="Times New Roman"/>
+
+            </Grid>
+
         </Grid>
 
         <!--andRest...-->
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*"/>
                 <ColumnDefinition Width="1*"/>
@@ -342,12 +352,27 @@
                 </Grid.RowDefinitions>
 
                 <Grid  Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
 
-                    <TextBlock x:Name="RaseChoiceTextBlockRaseName" 
-                           Margin="0,0,0,0" 
-                           Height="50" Width="400"
-                           TextWrapping="Wrap">
-                    </TextBlock>
+                    <Grid Grid.Column="1" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Border BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Border.Background>
+                                <SolidColorBrush Color="#FFD5D4D4" Opacity="0.75"/>
+                            </Border.Background>
+
+                            <TextBlock x:Name="RaseChoiceTextBlockRaseName" 
+                               Text="Wybierz Rasę"
+                               Margin="15,6"
+                               TextWrapping="Wrap" FontSize="36" TextAlignment="Center" 
+                                       FontFamily="Times New Roman" FontWeight="Bold">
+                            </TextBlock>
+
+                        </Border>
+                    </Grid>
 
                 </Grid>
 
@@ -360,17 +385,54 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="1">
-                        <TextBlock x:Name="RaseChoiceTextBlockRaseDescription" 
-                           Margin="0,0,0,0" 
-                           Height="432" Width="317"
-                           TextWrapping="Wrap">
-                        </TextBlock>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Border BorderBrush="Black" BorderThickness="4" Opacity="0.75" Margin="4">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/WHeditor;component/Images/Menu/Pergamin.jpg"/>
+                                </Border.Background>
+                            </Border>
+
+                            <TextBlock x:Name="RaseChoiceTextBlockRaseDescription" 
+                                   Text="LoriumIpsium LoriumIpsiumLoriumI psiumLoriumIpsiu mLoriumIp siumLoriumIpsiumL oriumIpsiumLo riumIp siumL oriumIpsiumL oriumIps iumLoriumIpsiumLori
+                                   umIpsiumLori umIpsiumL oriumIpsiumLoriumI psiLoriumIp siumLoriumIp siumLoriumIps ium Lorium IpsiumLorium Ilk;lk;l ;lk;lk;l ;lk ;lk; lk; lk;kl;k ;lk;lk;umum"
+                           Margin="10"
+                           TextWrapping="Wrap" FontFamily="Times New Roman" FontSize="18" TextAlignment="Center"/>
+                        </Grid>
+
+
+                        <Grid Grid.Row="1">
+                            <Border BorderBrush="Black" BorderThickness="4" Opacity="0.75" Margin="4">
+                                <Border.Background>
+                                    <ImageBrush ImageSource="/WHeditor;component/Images/Menu/Pergamin.jpg"/>
+                                </Border.Background>
+                            </Border>
+
+                            <TextBlock x:Name="RaseChoiceTextBlockRaseSkillsAndAbbilities" 
+                                   Text="LoriumIpsium LoriumIpsiumLoriumI psiumLoriumIpsiu mLoriumIp siumLoriumIpsiumL oriumIpsiumLo riumIp siumL oriumIpsiumL oriumIps iumLoriumIpsiumLori
+                                   umIpsiumLori umIpsiumL oriumIpsiumLoriumI psiLoriumIp siumLoriumIp siumLoriumIps ium Lorium IpsiumLorium Ilk;lk;l ;lk;lk;l ;lk ;lk; lk; lk;kl;k ;lk;lk;umum"
+                           Margin="10"
+                           TextWrapping="Wrap" FontFamily="Times New Roman" FontSize="18" TextAlignment="Center"/>
+
+                        </Grid>
                     </Grid>
                     <Grid Grid.Column="2">
-                        <Image x:Name="RaseChoiceImageRaseImg" 
-                           Margin="0,0,0,0" 
-                           Width="250" Height="400" >
-                        </Image>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Border BorderBrush="Black" BorderThickness="4" Background="#FFBAB6B6" Opacity="0.75" Margin="4"/>
+                        <Grid Grid.Row="0">
+
+                            <Border x:Name="IMGBorder" BorderBrush="White" BorderThickness="4" Background="#FFBAB6B6" Opacity="0.85" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Image x:Name="RaseChoiceImageRaseImg" 
+                               Margin="0,0,0,0" 
+                               Width="250" Height="400" />
+                            </Border>
+                        </Grid>
+
                     </Grid>
 
                 </Grid>
@@ -380,20 +442,22 @@
             </Grid>
         </Grid>
 
-        <Grid Grid.Row="2">
-            <Button x:Name="RaseChoiceButtonNextPage"      
-                    Click="RaceChoiceButtonNexyPage_Click"
-                    HorizontalAlignment="Right" 
-                    Margin="0,12,136,65.333" 
-                    Width="200" Height="50" Style="{DynamicResource ButtonNextPage}" 
-                    Visibility="Hidden"
-                    >
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="2">
+                <Button x:Name="RaseChoiceButtonNextPage"      
+                        Click="RaceChoiceButtonNexyPage_Click"
+                        Content="Następna Strona"
+                        HorizontalAlignment="Left" 
+                        BorderBrush="Black" BorderThickness="4"
+                        Margin="0,0,0,0" 
+                        Width="200" Height="50" Style="{DynamicResource ButtonNextPage}" Background="#FFB5B5B5" VerticalAlignment="Center" FontSize="22" FontFamily="Times New Roman" FontWeight="Bold"/>
+            </Grid>
 
-                <Button.Background >
-                    <ImageBrush ImageSource = "/WHeditor;component/Images/PageRaseChoice/NextPageButton.png"/>
-                </Button.Background >
-
-            </Button>
 
         </Grid>
 

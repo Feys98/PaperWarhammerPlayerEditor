@@ -71,12 +71,19 @@ namespace WHeditor
         private int button = 0 ;
         private int professionID,profesionID1, profesionID2, profesionID3;
         private int[] ProfAtt1, ProfAtt2, ProfAtt3;
+        private string ProfName1, ProfName2, ProfName3;
 
 
         public ProfessionChoice()
         {
             InitializeComponent();
             DisplayAtributesOfRase(DataBaseReader.GetArrayOfRaseAttributes());
+            ProfessionChoiceButtonNextPage.Visibility = Visibility.Hidden;
+            ProfessionChoiceButtonChoice3.Visibility = Visibility.Hidden;
+            ProfessionChoiceButtonChoice2.Visibility = Visibility.Hidden;
+            ProfessionChoiceButtonChoice1.Visibility = Visibility.Hidden;
+            IMGBorder.Visibility = Visibility.Hidden;
+
         }
 
         private void ProfessionChoiceButtonDiceRoll_Click(object sender, RoutedEventArgs e)
@@ -89,7 +96,8 @@ namespace WHeditor
                 profesionID1 = ProfessionRollValue.RollProfessionAndGetID();
 
                 ProfessionChoiceButtonChoice1.Visibility = Visibility.Visible;
-                ProfessionChoiceButtonChoice1.Content = DataBaseReader.GetProfessionName(profesionID1);
+                ProfName1 = DataBaseReader.GetProfessionName(profesionID1);
+                ProfessionChoiceButtonChoice1.Content = ProfName1;
                 ProfAtt1 = DataBaseReader.GetArrayOfProfessionAttributes(profesionID1);
 
             }
@@ -100,8 +108,9 @@ namespace WHeditor
                     profesionID2 = ProfessionRollValue.RollProfessionAndGetID();
                 } while (profesionID2 == profesionID1);
 
+                ProfName2 = DataBaseReader.GetProfessionName(profesionID2);
                 ProfessionChoiceButtonChoice2.Visibility = Visibility.Visible;
-                ProfessionChoiceButtonChoice2.Content = DataBaseReader.GetProfessionName(profesionID2); //TODO
+                ProfessionChoiceButtonChoice2.Content = ProfName2; //TODO
 
                 ProfAtt2 = DataBaseReader.GetArrayOfProfessionAttributes(profesionID2);
             }
@@ -113,8 +122,9 @@ namespace WHeditor
                     profesionID3 = ProfessionRollValue.RollProfessionAndGetID();
                 } while (profesionID3 == profesionID1 && profesionID3 == profesionID2);
 
+                ProfName3 = DataBaseReader.GetProfessionName(profesionID3);
                 ProfessionChoiceButtonChoice3.Visibility = Visibility.Visible;
-                ProfessionChoiceButtonChoice3.Content = DataBaseReader.GetProfessionName(profesionID3); //TODO
+                ProfessionChoiceButtonChoice3.Content = ProfName3; //TODO
 
 
                 ProfAtt3 = DataBaseReader.GetArrayOfProfessionAttributes(profesionID3);
@@ -128,6 +138,8 @@ namespace WHeditor
 
         private void ProfessionChoiceButtonChoice1_Click(object sender, RoutedEventArgs e)
         {
+            ProfessionName.Text = ProfName1;
+            IMGBorder.Visibility = Visibility.Visible;
             ProfessionChoiceButtonNextPage.Visibility = Visibility.Visible;
             button = 1;
             professionID = profesionID1;
@@ -135,26 +147,38 @@ namespace WHeditor
             ProfessionChoiceTextBlock.Text = GetDescription(professionID);
 
             DisplayAtributesOfProfession(Player.Attributes, ProfAtt1);
+
+            ProfessionRollProfessionImage.Source = new BitmapImage(new Uri($"../Images/Professions/ProfessionIMG{profesionID1}.png", UriKind.Relative));
         }
 
         private void ProfessionChoiceButtonChoice2_Click(object sender, RoutedEventArgs e)
         {
+            ProfessionName.Text = ProfName2;
+            IMGBorder.Visibility = Visibility.Visible;
             ProfessionChoiceButtonNextPage.Visibility = Visibility.Visible;
             button = 2;
             professionID = profesionID2;
 
             ProfessionChoiceTextBlock.Text = GetDescription(professionID);
             DisplayAtributesOfProfession(Player.Attributes, ProfAtt2);
+
+            ProfessionRollProfessionImage.Source = new BitmapImage(new Uri($"../Images/Professions/ProfessionIMG{profesionID2}.png", UriKind.Relative));
+
         }
 
         private void ProfessionChoiceButtonChoice3_Click(object sender, RoutedEventArgs e)
         {
+            ProfessionName.Text = ProfName3;
+            IMGBorder.Visibility = Visibility.Visible;
             ProfessionChoiceButtonNextPage.Visibility = Visibility.Visible;
             button = 3;
             professionID = profesionID3;
 
             ProfessionChoiceTextBlock.Text = GetDescription(professionID);
             DisplayAtributesOfProfession(Player.Attributes, ProfAtt3);
+
+            ProfessionRollProfessionImage.Source = new BitmapImage(new Uri($"../Images/Professions/ProfessionIMG{profesionID3}.png", UriKind.Relative));
+
         }
 
 
