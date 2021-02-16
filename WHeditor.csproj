@@ -208,6 +208,11 @@
     <Resource Include="Images\Professions\ProfessionIMG18.png" />
     <Resource Include="Images\Professions\ProfessionIMG19.png" />
     <Resource Include="Images\Professions\ProfessionIMG20.png" />
+    <Resource Include="Images\Professions\ProfessionIMG21.png" />
+    <Resource Include="Images\Professions\ProfessionIMG22.png" />
+    <Resource Include="Images\Professions\ProfessionIMG23.png" />
+    <Resource Include="Images\Professions\ProfessionIMG24.png" />
+    <Resource Include="Images\Professions\ProfessionIMG25.png" />
     <Content Include="WHPE_db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
