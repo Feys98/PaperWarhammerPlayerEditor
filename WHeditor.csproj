@@ -186,6 +186,7 @@
     <Resource Include="Images\PageRaseChoice\HumanIcon.png" />
     <Resource Include="Images\PageRaseChoice\HumanIconWithBorder.png" />
     <Resource Include="Images\PageRaseChoice\HumanImg.png" />
+    <Resource Include="Images\Menu\Pergamin.jpg" />
     <Content Include="WHPE_db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -210,7 +211,6 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\Menu\" />
     <Folder Include="Images\Professions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
