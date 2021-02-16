@@ -27,6 +27,7 @@ namespace WHeditor
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            DataBaseReader.Load();
             App.ParentWindowRef = this;
             this.ParentFrame.Navigate(new MainMenu());
         }

@@ -70,6 +70,7 @@ namespace WHeditor
         private int roll = 0;
         private int button = 0 ;
         private int professionID,profesionID1, profesionID2, profesionID3;
+        private int[] ProfAtt1, ProfAtt2, ProfAtt3;
 
 
         public ProfessionChoice()
@@ -89,7 +90,7 @@ namespace WHeditor
 
                 ProfessionChoiceButtonChoice1.Visibility = Visibility.Visible;
                 ProfessionChoiceButtonChoice1.Content = DataBaseReader.GetProfessionName(profesionID1);
-                
+                ProfAtt1 = DataBaseReader.GetArrayOfProfessionAttributes(profesionID1);
 
             }
             if (roll == 2)
@@ -101,6 +102,8 @@ namespace WHeditor
 
                 ProfessionChoiceButtonChoice2.Visibility = Visibility.Visible;
                 ProfessionChoiceButtonChoice2.Content = DataBaseReader.GetProfessionName(profesionID2); //TODO
+
+                ProfAtt2 = DataBaseReader.GetArrayOfProfessionAttributes(profesionID2);
             }
             if (roll == 3)
             {
@@ -112,6 +115,10 @@ namespace WHeditor
 
                 ProfessionChoiceButtonChoice3.Visibility = Visibility.Visible;
                 ProfessionChoiceButtonChoice3.Content = DataBaseReader.GetProfessionName(profesionID3); //TODO
+
+
+                ProfAtt3 = DataBaseReader.GetArrayOfProfessionAttributes(profesionID3);
+
                 ProfessionChoiceButtonDiceRoll.Visibility = Visibility.Hidden;
             }
         }
@@ -127,7 +134,7 @@ namespace WHeditor
 
             ProfessionChoiceTextBlock.Text = GetDescription(professionID);
 
-            DisplayAtributesOfProfession(DataBaseReader.GetArrayOfRaseAttributes(), DataBaseReader.GetArrayOfProfessionAttributes(profesionID1));
+            DisplayAtributesOfProfession(Player.Attributes, ProfAtt1);
         }
 
         private void ProfessionChoiceButtonChoice2_Click(object sender, RoutedEventArgs e)
@@ -137,7 +144,7 @@ namespace WHeditor
             professionID = profesionID2;
 
             ProfessionChoiceTextBlock.Text = GetDescription(professionID);
-            DisplayAtributesOfProfession(DataBaseReader.GetArrayOfRaseAttributes(), DataBaseReader.GetArrayOfProfessionAttributes(profesionID2));
+            DisplayAtributesOfProfession(Player.Attributes, ProfAtt2);
         }
 
         private void ProfessionChoiceButtonChoice3_Click(object sender, RoutedEventArgs e)
@@ -147,7 +154,7 @@ namespace WHeditor
             professionID = profesionID3;
 
             ProfessionChoiceTextBlock.Text = GetDescription(professionID);
-            DisplayAtributesOfProfession(DataBaseReader.GetArrayOfRaseAttributes(), DataBaseReader.GetArrayOfProfessionAttributes(profesionID3));
+            DisplayAtributesOfProfession(Player.Attributes, ProfAtt3);
         }
 
 

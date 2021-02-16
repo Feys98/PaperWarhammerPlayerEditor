@@ -77,6 +77,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\AttributesRoll.xaml.cs">
+      <DependentUpon>AttributesRoll.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Func\DataBaseReader.cs" />
     <Compile Include="Func\OutOfRollRangeException.cs" />
     <Compile Include="Pages\RaseChoice.xaml.cs">
@@ -95,6 +98,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WHPE_dbDataSet.xsd</DependentUpon>
     </Compile>
+    <Page Include="Pages\AttributesRoll.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MainMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -179,7 +186,7 @@
     <Resource Include="Images\PageRaseChoice\HumanIconWithBorder.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\WariorImg.png" />
+    <Resource Include="Images\PageRaseChoice\HumanImg.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\PageRaseChoice\DwarfImg.png" />

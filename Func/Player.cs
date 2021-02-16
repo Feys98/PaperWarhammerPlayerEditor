@@ -31,6 +31,10 @@ namespace WHeditor
                 Attributes[i] = at[i];
             }
         }
+        public static void SetOneAttribute(int at, int value)
+        {
+            Attributes[at] = value;
+        }
 
     }
 

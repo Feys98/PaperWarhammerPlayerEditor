@@ -345,7 +345,7 @@
                                 VerticalAlignment="Center" Width="200" Height="200"
                                 Click="ProfessionChoiceButtonDiceRoll_Click" 
                                 Style="{DynamicResource ButtonDiceStyle}"
-                                 BorderBrush="Black" BorderThickness="4">
+                                BorderBrush="Black" BorderThickness="4">
                             <Button.Background>
                                 <ImageBrush ImageSource="/WHeditor;component/Images/PageProfessionChoice/Dice1.jpg"/>
                             </Button.Background>

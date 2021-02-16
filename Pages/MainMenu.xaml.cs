@@ -28,7 +28,6 @@ namespace WHeditor
 
         private void MainMenuButtonNewPlayer_Click(object sender, RoutedEventArgs e)
         {
-            DataBaseReader.Load();
             NavigationService.Navigate(new RaseChoice());
         }
         private void MainMenuButtonLoadPlayer_Click(object sender, RoutedEventArgs e)

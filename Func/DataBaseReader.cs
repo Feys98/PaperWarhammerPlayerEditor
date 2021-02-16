@@ -36,7 +36,10 @@ namespace WHeditor
             cnn.Close();
         }
 
-
+        public static string GetArrayOfAttributesString(int i)
+        {
+            return ArrayOfAttributesString[i];
+        }
 
         public static string Get1StringValue(string Query)
         {
@@ -146,5 +149,11 @@ namespace WHeditor
         {
             return (DataBaseReader.Get1StringValue($"Select ProfessionsUpgrades From Professions Where id = '{professionID}'"));
         }
+        public static int GetPPPointsValue(int raseID, int rollValue)
+        {
+            return (DataBaseReader.Get1IntValue($"SELECT PPPoints FROM PPPointsRoll WHERE RaseID = '{raseID}' AND Roll = '{rollValue}'"));
+        }
+
+
     }
 }
