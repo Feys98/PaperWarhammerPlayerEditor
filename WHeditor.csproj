@@ -170,36 +170,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\ElfIconWithBorder.png" />
-    <Resource Include="Images\PageRaseChoice\HalflingIconWithBorder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\DwarfIcon.png" />
-    <Resource Include="Images\PageRaseChoice\ElfIcon.png" />
-    <Resource Include="Images\PageRaseChoice\HalflingIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\DwarfIconWithBorder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\HumanIcon.png" />
-    <Resource Include="Images\PageRaseChoice\HumanIconWithBorder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\HumanImg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\DwarfImg.png" />
-    <Resource Include="Images\PageRaseChoice\HalflingImg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\PageRaseChoice\ElfImg.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\PageRaseChoice\NextPageButton.png" />
     <Resource Include="Images\PageRaseChoice\NextPageButtonWithBorder.png" />
     <Resource Include="Images\PageProfessionChoice\Dice1.jpg" />
     <Resource Include="Images\PageProfessionChoice\Dice2.jpg" />
+    <Resource Include="Images\PageRaseChoice\DwarfIcon.png" />
+    <Resource Include="Images\PageRaseChoice\DwarfIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\DwarfImg.png" />
+    <Resource Include="Images\PageRaseChoice\ElfIcon.png" />
+    <Resource Include="Images\PageRaseChoice\ElfIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\ElfImg.png" />
+    <Resource Include="Images\PageRaseChoice\HalflingIcon.png" />
+    <Resource Include="Images\PageRaseChoice\HalflingIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\HalflingImg.png" />
+    <Resource Include="Images\PageRaseChoice\HumanIcon.png" />
+    <Resource Include="Images\PageRaseChoice\HumanIconWithBorder.png" />
+    <Resource Include="Images\PageRaseChoice\HumanImg.png" />
     <Content Include="WHPE_db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -222,6 +208,10 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\Menu\" />
+    <Folder Include="Images\Professions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
