@@ -78,6 +78,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Func\ScreenShot.cs" />
+    <Compile Include="Func\StringReader.cs" />
     <Compile Include="Pages\AttributesRoll.xaml.cs">
       <DependentUpon>AttributesRoll.xaml</DependentUpon>
     </Compile>

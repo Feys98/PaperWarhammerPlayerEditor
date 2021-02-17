@@ -38,8 +38,36 @@ namespace WHeditor
             //    $"Umiejętności:\n" +
             //    $"{DataBaseReader.GetRaseSkills()}";
 
-            zd1.Text = $"{DataBaseReader.GetRaseAbilites()}";
-            zd2.Text = $"{DataBaseReader.GetRaseSkills()}";
+
+
+            string [] s1 = StringReader.Convert(DataBaseReader.GetRaseAbilites());
+            List<string> ss1= new List<string>();
+            int value1;
+            ss1 = StringReader.orOr(s1,out value1);
+
+
+
+            string newS1 = "";
+
+            foreach (var x in s1)
+            {
+                newS1 += $"{x} ";
+            }
+
+
+            string newS2= "";
+
+            foreach (var x in ss1)
+            {
+                newS2 += $"{x} ";
+            }
+
+
+            //zd1.Text = $"{DataBaseReader.GetRaseAbilites()}";
+            //zd2.Text = $"{DataBaseReader.GetRaseSkills()}";
+            zd1.Text = $"{newS1} !AND! " +
+                $"{newS2}";
+            zd2.Text = $"{value1}";
         }
 
         private void RaceChoiceButtonHumanIcon_Click (object sender, RoutedEventArgs e)
