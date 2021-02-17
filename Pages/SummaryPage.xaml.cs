@@ -81,11 +81,14 @@ namespace WHeditor
             ExitButton.Visibility = Visibility.Hidden;
             saveAndExitButton.Visibility = Visibility.Hidden;
 
-            System.IO.Directory.CreateDirectory(@"\\Save");
-
             UIElement element = scrollViewer.Content as UIElement;
-            Uri path = new Uri(@"\\Save\scr1.png");
 
+            string pathhh = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Save");
+            System.IO.Directory.CreateDirectory(pathhh);
+
+            string pathh = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Save\\screenshot.png");
+
+            Uri path = new Uri(pathh);
             ScreenShot.CaptureScreen(element, path);
             App.Current.Shutdown();
         }
