@@ -77,6 +77,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Func\Debugs.cs" />
     <Compile Include="Func\RandomAbility.cs" />
     <Compile Include="Func\ScreenShot.cs" />
     <Compile Include="Func\StringReader.cs" />
