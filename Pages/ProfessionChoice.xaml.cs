@@ -101,15 +101,13 @@ namespace WHeditor
             IMGBorder.Visibility = Visibility.Hidden;
 
         }
-
+        private int test = 0;
         private void ProfessionChoiceButtonDiceRoll_Click(object sender, RoutedEventArgs e)
         {
             
-            roll++;
 
-            if (roll == 1)
-            {
-                profesionID1 = ProfessionRollValue.RollProfessionAndGetID();
+                profesionID1 =test;
+            test++;
 
                 ProfessionChoiceButtonChoice1.Visibility = Visibility.Visible;
                 ProfName1 = DataBaseReader.GetProfessionName(profesionID1);
@@ -117,40 +115,6 @@ namespace WHeditor
                 ProfAtt1 = DataBaseReader.GetArrayOfProfessionAttributes(profesionID1);
                 ProfDes1 = DataBaseReader.GetProfessionDescription(profesionID1);
                 ProfLeft1 = GetLeft(profesionID1);
-
-
-            }
-            if (roll == 2)
-            {
-                do
-                {
-                    profesionID2 = ProfessionRollValue.RollProfessionAndGetID();
-                } while (profesionID2 == profesionID1);
-
-                ProfName2 = DataBaseReader.GetProfessionName(profesionID2);
-                ProfessionChoiceButtonChoice2.Visibility = Visibility.Visible;
-                ProfessionChoiceButtonChoice2.Content = ProfName2; //TODO
-                ProfDes2 = DataBaseReader.GetProfessionDescription(profesionID2);
-                ProfAtt2 = DataBaseReader.GetArrayOfProfessionAttributes(profesionID2);
-                ProfLeft2 = GetLeft(profesionID2);
-            }
-            if (roll == 3)
-            {
-
-                do
-                {
-                    profesionID3 = ProfessionRollValue.RollProfessionAndGetID();
-                } while (profesionID3 == profesionID1 || profesionID3 == profesionID2);
-
-                ProfName3 = DataBaseReader.GetProfessionName(profesionID3);
-                ProfessionChoiceButtonChoice3.Visibility = Visibility.Visible;
-                ProfessionChoiceButtonChoice3.Content = ProfName3; //TODO
-                ProfDes3 = DataBaseReader.GetProfessionDescription(profesionID3);
-                ProfAtt3 = DataBaseReader.GetArrayOfProfessionAttributes(profesionID3);
-                ProfLeft3 = GetLeft(profesionID3);
-
-                ProfessionChoiceButtonDiceRoll.Visibility = Visibility.Hidden;
-            }
         }
 
 
