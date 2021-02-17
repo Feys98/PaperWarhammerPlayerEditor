@@ -188,7 +188,7 @@ namespace WHeditor
             if (button!= 0)
             {
                 Player.SetRaceID(professionID);
-                App.Current.Shutdown();
+                NavigationService.Navigate(new SummaryPage());
             }
         }
     }

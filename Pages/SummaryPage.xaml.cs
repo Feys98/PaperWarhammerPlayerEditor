@@ -24,9 +24,9 @@ namespace WHeditor
         {
             InitializeComponent();
             string s = "";
-            foreach (var x in Player.Attributes)
+            foreach (var x in Player.Abilites)
             {
-                s = $"{s}; ";
+                s += $"{x}; ";
             }
             test.Text = s;
 
