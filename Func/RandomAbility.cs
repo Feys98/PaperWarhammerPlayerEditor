@@ -29,7 +29,7 @@ namespace WHeditor
                             str = "blyskotliwy";
                             break;
                         case 18:
-                            str = "bystryy wzrok";
+                            str = "bystry wzrok";
                             break;
                         case 22:
                             str = "charyzmatyczny";

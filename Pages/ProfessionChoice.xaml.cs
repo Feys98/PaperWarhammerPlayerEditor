@@ -60,18 +60,34 @@ namespace WHeditor
             POValue.Content = t[14] + t2[14];
             PPValue.Content = t[15] + t2[15];
         }
-        private string GetDescription(int _professionID)
+        private string[] GetLeft(int _professionID)
         {
-            return $"Umiejętności:\n{DataBaseReader.GetProfessionAbilities(_professionID)}\n" +
-                $"Zdolności:\n{DataBaseReader.GetProfessionAbilities(_professionID)}\n" +
-                $"Wyposażenie:\n{DataBaseReader.GetProfessionEQ(_professionID)}\n" +
-                $"Profesje wyjściowe:\n{DataBaseReader.GetProfessionUpgrades(_professionID)}";
+            string[] s = new string[4];
+            s[0] = $"{DataBaseReader.GetProfessionAbilities(_professionID)}";
+            s[1] = $"{DataBaseReader.GetProfessionSkills(_professionID)}";
+            s[2] = $"{DataBaseReader.GetProfessionEQ(_professionID)}";
+            s[3] = $"{DataBaseReader.GetProfessionUpgrades(_professionID)}";
+            return s;
         }
+        private void SetLeft(string[] s)
+        {
+            UMtxt.Text = s[0]; 
+            ZDtxt.Text = s[1];
+            EQtxt.Text = s[2];
+            Nexttxt.Text = s[3];
+        }
+        private void DisplayDescription ()
+        {
+
+        }
+
         private int roll = 0;
         private int button = 0 ;
         private int professionID,profesionID1, profesionID2, profesionID3;
         private int[] ProfAtt1, ProfAtt2, ProfAtt3;
         private string ProfName1, ProfName2, ProfName3;
+        private string ProfDes1, ProfDes2, ProfDes3;
+        private string[] ProfLeft1, ProfLeft2, ProfLeft3;
 
 
         public ProfessionChoice()
@@ -99,6 +115,9 @@ namespace WHeditor
                 ProfName1 = DataBaseReader.GetProfessionName(profesionID1);
                 ProfessionChoiceButtonChoice1.Content = ProfName1;
                 ProfAtt1 = DataBaseReader.GetArrayOfProfessionAttributes(profesionID1);
+                ProfDes1 = DataBaseReader.GetProfessionDescription(profesionID1);
+                ProfLeft1 = GetLeft(profesionID1);
+
 
             }
             if (roll == 2)
@@ -111,8 +130,9 @@ namespace WHeditor
                 ProfName2 = DataBaseReader.GetProfessionName(profesionID2);
                 ProfessionChoiceButtonChoice2.Visibility = Visibility.Visible;
                 ProfessionChoiceButtonChoice2.Content = ProfName2; //TODO
-
+                ProfDes2 = DataBaseReader.GetProfessionDescription(profesionID2);
                 ProfAtt2 = DataBaseReader.GetArrayOfProfessionAttributes(profesionID2);
+                ProfLeft2 = GetLeft(profesionID2);
             }
             if (roll == 3)
             {
@@ -120,14 +140,14 @@ namespace WHeditor
                 do
                 {
                     profesionID3 = ProfessionRollValue.RollProfessionAndGetID();
-                } while (profesionID3 == profesionID1 && profesionID3 == profesionID2);
+                } while (profesionID3 == profesionID1 || profesionID3 == profesionID2);
 
                 ProfName3 = DataBaseReader.GetProfessionName(profesionID3);
                 ProfessionChoiceButtonChoice3.Visibility = Visibility.Visible;
                 ProfessionChoiceButtonChoice3.Content = ProfName3; //TODO
-
-
+                ProfDes3 = DataBaseReader.GetProfessionDescription(profesionID3);
                 ProfAtt3 = DataBaseReader.GetArrayOfProfessionAttributes(profesionID3);
+                ProfLeft3 = GetLeft(profesionID3);
 
                 ProfessionChoiceButtonDiceRoll.Visibility = Visibility.Hidden;
             }
@@ -144,8 +164,8 @@ namespace WHeditor
             button = 1;
             professionID = profesionID1;
 
-            ProfessionChoiceTextBlock.Text = GetDescription(professionID);
-
+            ProfessionChoiceDescTextBlock.Text = ProfDes1;
+            SetLeft(ProfLeft1);
             DisplayAtributesOfProfession(Player.Attributes, ProfAtt1);
 
             ProfessionRollProfessionImage.Source = new BitmapImage(new Uri($"../Images/Professions/ProfessionIMG{profesionID1}.png", UriKind.Relative));
@@ -159,7 +179,8 @@ namespace WHeditor
             button = 2;
             professionID = profesionID2;
 
-            ProfessionChoiceTextBlock.Text = GetDescription(professionID);
+            ProfessionChoiceDescTextBlock.Text = ProfDes2;
+            SetLeft(ProfLeft2);
             DisplayAtributesOfProfession(Player.Attributes, ProfAtt2);
 
             ProfessionRollProfessionImage.Source = new BitmapImage(new Uri($"../Images/Professions/ProfessionIMG{profesionID2}.png", UriKind.Relative));
@@ -174,7 +195,8 @@ namespace WHeditor
             button = 3;
             professionID = profesionID3;
 
-            ProfessionChoiceTextBlock.Text = GetDescription(professionID);
+            ProfessionChoiceDescTextBlock.Text = ProfDes3;
+            SetLeft(ProfLeft3);
             DisplayAtributesOfProfession(Player.Attributes, ProfAtt3);
 
             ProfessionRollProfessionImage.Source = new BitmapImage(new Uri($"../Images/Professions/ProfessionIMG{profesionID3}.png", UriKind.Relative));

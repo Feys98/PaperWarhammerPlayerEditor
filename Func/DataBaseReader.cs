@@ -181,6 +181,12 @@ namespace WHeditor
         {
             return (DataBaseReader.Get1StringValue($"Select ProfessionsUpgrades From Professions Where id = '{professionID}'"));
         }
+        public static string GetProfessionDescription(int professionID)
+        { 
+            return (DataBaseReader.Get1StringValue($"Select ProfessionDescription From Professions Where id = '{professionID}'"));
+        }
+
+
         public static int GetPPPointsValue(int raseID, int rollValue)
         {
             return (DataBaseReader.Get1IntValue($"SELECT PPPoints FROM PPPointsRoll WHERE RaseID = '{raseID}' AND Roll = '{rollValue}'"));

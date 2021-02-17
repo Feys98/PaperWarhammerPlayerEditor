@@ -77,6 +77,7 @@ namespace WHeditor
             RaseAbbAndSkills();
             RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/HumanImg.png", UriKind.Relative)); IMGBorder.Visibility = Visibility.Visible;
             RaseChoiceButtonNextPage.Visibility = Visibility.Visible;
+            zd2.Text = "dwie losowo wybrane umiejętności";
         }
         private void RaceChoiceButtonElfIcon_Click(object sender, RoutedEventArgs e)
         {
@@ -108,6 +109,7 @@ namespace WHeditor
             RaseAbbAndSkills();
             RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/HalflingImg.png", UriKind.Relative)); IMGBorder.Visibility = Visibility.Visible;
             RaseChoiceButtonNextPage.Visibility = Visibility.Visible;
+            zd2.Text += ", jedna dodatkowa losowo wybrana umiejętność";
         }
 
 
