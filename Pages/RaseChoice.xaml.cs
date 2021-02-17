@@ -23,57 +23,56 @@ namespace WHeditor
 {
     public partial class RaseChoice : Page
     {
+        private string[] RaseAbilArr, RaseSkArr;
+        private string[] randomAbilHuman = new string[2];
+        private string[] randomAbilHalf = new string[1];
         public RaseChoice()
         {
             InitializeComponent();
             RaseChoiceButtonNextPage.Visibility = Visibility.Hidden;
             IMGBorder.Visibility = Visibility.Hidden;
+
+            //humanAbb = DataBaseReader.GetRaseAbilites(1);
+            //elfSkills = DataBaseReader.GetRaseAbilites(2);
+            //dwarfAbb = DataBaseReader.GetRaseAbilites(3);
+            //halfAbb = DataBaseReader.GetRaseAbilites(4);
+
+            //humanSkills = DataBaseReader.GetRaseSkills(1);
+            //elfSkills = DataBaseReader.GetRaseSkills(2);
+            //dwarfSkills = DataBaseReader.GetRaseSkills(3);
+            //halfSkills = DataBaseReader.GetRaseSkills(4);
+
+            randomAbilHuman[0] = RandomAbility.Run(1);
+            randomAbilHuman[1] = RandomAbility.Run(1);
+            randomAbilHalf [0] = RandomAbility.Run(4);
+
+
         }
+
+       
 
         private void RaseAbbAndSkills()
         {
-            //RaseChoiceTextBlockRaseSkillsAndAbbilities.Text = 
-            //    $"Zdolności:\n" +
-            //    $"{DataBaseReader.GetRaseAbilites()}\n" +
-            //    $"Umiejętności:\n" +
-            //    $"{DataBaseReader.GetRaseSkills()}";
+            zd1.Text = $"{DataBaseReader.GetRaseAbilites()}";    
+            zd2.Text= $"{DataBaseReader.GetRaseSkills()}";
+
+            RaseAbilArr = StringReader.Convert(DataBaseReader.GetRaseAbilites());
+            int RaseAbilOrOrValue;
+            List<string> RaseAbilList;
+            List<string> RaseAbilOrOrList= StringReader.orOr(RaseAbilArr, out RaseAbilOrOrValue, out RaseAbilList);
 
 
-
-            string [] s1 = StringReader.Convert(DataBaseReader.GetRaseAbilites());
-            List<string> ss1= new List<string>();
-            int value1;
-            ss1 = StringReader.orOr(s1,out value1);
-
-
-
-            string newS1 = "";
-
-            foreach (var x in s1)
-            {
-                newS1 += $"{x} ";
-            }
-
-
-            string newS2= "";
-
-            foreach (var x in ss1)
-            {
-                newS2 += $"{x} ";
-            }
-
-
-            //zd1.Text = $"{DataBaseReader.GetRaseAbilites()}";
-            //zd2.Text = $"{DataBaseReader.GetRaseSkills()}";
-            zd1.Text = $"{newS1} !AND! " +
-                $"{newS2}";
-            zd2.Text = $"{value1}";
+            RaseSkArr = StringReader.Convert(DataBaseReader.GetRaseSkills());
+            int RaseSkOrOrValue;
+            List<string> RaseSkList;
+            List<string> RaseSkOrOrList = StringReader.orOr(RaseSkArr, out RaseSkOrOrValue, out RaseSkList);
         }
 
         private void RaceChoiceButtonHumanIcon_Click (object sender, RoutedEventArgs e)
         {
+
             Player.SetRaceID(1);
-            RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
+            RaseChoiceTextBlockRaseName.Text = "Człowiek";
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
             RaseAbbAndSkills();
             RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/HumanImg.png", UriKind.Relative)); IMGBorder.Visibility = Visibility.Visible;
@@ -81,9 +80,10 @@ namespace WHeditor
         }
         private void RaceChoiceButtonElfIcon_Click(object sender, RoutedEventArgs e)
         {
+
             Player.SetRaceID(2);
 
-            RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
+            RaseChoiceTextBlockRaseName.Text = "Elf";
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
             RaseAbbAndSkills();
             RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/ElfImg.png", UriKind.Relative)); IMGBorder.Visibility = Visibility.Visible;
@@ -93,7 +93,7 @@ namespace WHeditor
         {
             Player.SetRaceID(3);
 
-            RaseChoiceTextBlockRaseName.Text = DataBaseReader.GetRaseName();
+            RaseChoiceTextBlockRaseName.Text = "Krasnolud";
             RaseChoiceTextBlockRaseDescription.Text = DataBaseReader.GetRaseDescription();
             RaseAbbAndSkills();
             RaseChoiceImageRaseImg.Source = new BitmapImage(new Uri("../Images/PageRaseChoice/DwarfImg.png", UriKind.Relative)); IMGBorder.Visibility = Visibility.Visible;
@@ -114,10 +114,21 @@ namespace WHeditor
 
         private void RaceChoiceButtonNexyPage_Click(object sender, RoutedEventArgs e)
         {
-
             Player.SetAttributes(DataBaseReader.GetArrayOfRaseAttributes());
-            NavigationService.Navigate(new AttributesRoll());
 
+            Player.SetAbilites(RaseAbilArr);
+            Player.SetSkills(RaseSkArr);
+
+            if (Player.RaseID == 1)
+            {
+                Player.SetAbilites(randomAbilHuman);
+            }
+            if (Player.RaseID == 4)
+            {
+                Player.SetAbilites(randomAbilHalf);
+            }
+
+            NavigationService.Navigate(new AttributesRoll());
         }
     }
 }

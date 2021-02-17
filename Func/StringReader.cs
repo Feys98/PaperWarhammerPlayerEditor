@@ -14,9 +14,11 @@ namespace WHeditor
             ss = s.Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries) ;
             return ss;
         }
-        public static List<string> orOr(string[] s, out int howMany)
+        public static List<string> orOr(string[] s, out int howMany, out List<string> newS)
         {
             howMany = 0;
+
+            newS = new List<string>();
             List<string> oror = new List<string>();
             for (int i = 0; i < s.Length; i++)
             {
@@ -27,6 +29,10 @@ namespace WHeditor
                     oror.Add(sshelp[0]);
                     oror.Add(sshelp[1]);
                     howMany++;
+                }
+                else
+                {
+                    newS.Add(s[i]);
                 }
             }         
             return oror;

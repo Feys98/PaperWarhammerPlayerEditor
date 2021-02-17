@@ -135,6 +135,15 @@ namespace WHeditor
             return (DataBaseReader.Get1StringValue($"SELECT RaseSkils From Rase Where id = '{Player.RaseID}'"));
         }
 
+        public static string GetRaseAbilites(int ID)
+        {
+            return (DataBaseReader.Get1StringValue($"SELECT RaseAbilites From Rase Where id = '{ID}'"));
+        }
+        public static string GetRaseSkills(int ID)
+        {
+            return (DataBaseReader.Get1StringValue($"SELECT RaseSkils From Rase Where id = '{ID}'"));
+        }
+
 
 
 

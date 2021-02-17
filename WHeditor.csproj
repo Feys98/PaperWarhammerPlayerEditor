@@ -77,6 +77,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Func\RandomAbility.cs" />
     <Compile Include="Func\ScreenShot.cs" />
     <Compile Include="Func\StringReader.cs" />
     <Compile Include="Pages\AttributesRoll.xaml.cs">
@@ -92,6 +93,9 @@
       <DependentUpon>ProfessionChoice.xaml</DependentUpon>
     </Compile>
     <Compile Include="Func\ProfessionRollValue.cs" />
+    <Compile Include="Pages\SummaryPage.xaml.cs">
+      <DependentUpon>SummaryPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WHPE_dbDataSet.cs">
       <DependentUpon>WHPE_dbDataSet.xsd</DependentUpon>
     </Compile>
@@ -129,6 +133,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ProfessionChoice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SummaryPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
