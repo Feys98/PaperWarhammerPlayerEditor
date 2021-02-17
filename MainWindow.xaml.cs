@@ -27,6 +27,11 @@ namespace WHeditor
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+
+            string pathhh = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Save");
+            System.IO.Directory.CreateDirectory(pathhh);
+
+
             DataBaseReader.Load();
             App.ParentWindowRef = this;
             this.ParentFrame.Navigate(new MainMenu());

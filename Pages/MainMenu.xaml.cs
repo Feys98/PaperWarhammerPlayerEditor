@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,10 +30,12 @@ namespace WHeditor
         private void MainMenuButtonNewPlayer_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new RaseChoice());
+
         }
         private void MainMenuButtonLoadPlayer_Click(object sender, RoutedEventArgs e)
         {
-            //TODO
+            string pathh = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Save");
+            Process.Start(pathh);
         }
 
         private void MainMenuButtonExit_Click(object sender, RoutedEventArgs e)

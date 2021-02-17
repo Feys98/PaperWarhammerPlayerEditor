@@ -83,9 +83,6 @@ namespace WHeditor
 
             UIElement element = scrollViewer.Content as UIElement;
 
-            string pathhh = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Save");
-            System.IO.Directory.CreateDirectory(pathhh);
-
             string pathh = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Save\\screenshot.png");
 
             Uri path = new Uri(pathh);
