@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -87,6 +88,8 @@ namespace WHeditor
 
             Uri path = new Uri(pathh);
             ScreenShot.CaptureScreen(element, path);
+            string pathhh = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Save");
+            Process.Start(pathhh);
             App.Current.Shutdown();
         }
 
