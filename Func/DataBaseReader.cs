@@ -121,6 +121,10 @@ namespace WHeditor
         {
             return (DataBaseReader.Get1StringValue($"SELECT RaseName From Rase Where ID = '{Player.RaseID}'"));
         }
+        public static string GetRaseName(int id)
+        {
+            return (DataBaseReader.Get1StringValue($"SELECT RaseName From Rase Where ID = '{id}'"));
+        }
         public static string GetRaseDescription()
         {
             return (DataBaseReader.Get1StringValue($"SELECT RaseDescrioption From Rase Where id = '{Player.RaseID}'"));

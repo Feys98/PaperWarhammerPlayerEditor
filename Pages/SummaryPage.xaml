@@ -7,9 +7,456 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SummaryPage" Width="1024" Height="720">
+    <Page.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="SnEButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
 
+                                <Setter Property="BorderBrush" TargetName="border" Value="White"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="Gray"/>
+
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="EButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+
+                                <Setter Property="BorderBrush" TargetName="border" Value="White"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="Gray"/>
+
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <ScrollViewer x:Name="scrollViewer">
     <Grid>
-        <TextBlock x:Name="test" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="445" Width="885" Margin="100,150,0,0"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.35*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+
+                <ColumnDefinition Width="0.1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Border  BorderBrush="Black" BorderThickness="4" Margin="6">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/WHeditor;component/Images/Menu/Pergamin.jpg" Opacity="0.75"/>
+                        </Border.Background>
+                        <TextBlock x:Name="OpisPostaci" TextWrapping="Wrap" Width="155" FontFamily="Times New Roman" FontSize="18" TextAlignment="Center" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Run FontWeight="Bold" Text="RASA:"/><LineBreak/>
+                            <Run x:Name="rasaName" Text=""/><LineBreak/>
+                            <Run/><LineBreak/>
+                            <Run FontWeight="Bold" Text="PROFESJA:"/>
+                            <LineBreak/><Run x:Name="profName" Text=""/>
+                        </TextBlock>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1">
+
+                    <Border  BorderBrush="Black" BorderThickness="4" Margin="6">
+                        <Border.Background>
+                            <SolidColorBrush Color="#FFB9B6B6" Opacity="0.75"/>
+                        </Border.Background>
+                    </Border>
+
+
+                    <Border x:Name="IMGBorder" BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5">
+                        <Image x:Name="ProfessionImage" Width="210" Margin="0" Height="320"/>
+                    </Border>
+
+
+
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Column="2">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="4*"/>
+
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Border  BorderBrush="Black" BorderThickness="4" Margin="6">
+                        <Border.Background>
+                            <SolidColorBrush Color="#FFB9B6B6" Opacity="0.75"/>
+                        </Border.Background>
+
+                        <Border BorderBrush="Black" BorderThickness="2" Margin="15">
+                            <Grid Grid.Row="0">
+                                <Grid.Background>
+                                    <SolidColorBrush Color="#FFA59F9F" Opacity="0.75"/>
+                                </Grid.Background>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition  Height="1*"/>
+                                    <RowDefinition  Height="1*"/>
+                                    <RowDefinition  Height="1*"/>
+                                    <RowDefinition  Height="1*"/>
+                                    <RowDefinition  Height="1*"/>
+                                    <RowDefinition  Height="1*"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="0" >
+                                    <Border BorderBrush="Black" BorderThickness="2">
+                                        <Label Content=" CECHY GŁÓWNE " FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Border>
+                                </Grid>
+
+
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <Grid Grid.Column="0">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="WW" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="US" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="2">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="K" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="3">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="Odp" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="4">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="Zr" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="5">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="Int" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="6">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="SW" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="7">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="Ogd" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+
+                                </Grid>
+
+                                <Grid Grid.Row="2">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="0">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="WWValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="USValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="2">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="KValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="3">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="OdpValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="4">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="ZrValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="5">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="IntValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="6">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="SWValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="7">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="OgdValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="3">
+                                    <Border BorderBrush="Black" BorderThickness="2"/>
+                                    <Label Content=" CECHY DRUGORZĘDNE " FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+
+                                </Grid>
+                                <Grid Grid.Row="4">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="A" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="Żyw" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="2">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="S" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="3">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="Wt" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="4">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="Sz" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="5">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="Mag" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="6">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="PO" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="7">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label Content="PP" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+
+                                </Grid>
+                                <Grid Grid.Row="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+                                </Grid>
+                                <Grid Grid.Row="6">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="0">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="AValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="ZywValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="2">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="SValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="3">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="WtValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="4">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="SzValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="5">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="MagValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="6">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="POValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                    <Grid Grid.Column="7">
+                                        <Border BorderBrush="Black" BorderThickness="2"/>
+                                        <Label x:Name="PPValue" Content="" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Times New Roman"/>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Border>
+
+
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Border  BorderBrush="Black" BorderThickness="4" Margin="6">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/WHeditor;component/Images/Menu/Pergamin.jpg" Opacity="0.75"/>
+                        </Border.Background>
+                        <TextBlock TextWrapping="Wrap" Margin="10" TextAlignment="Center" VerticalAlignment="Center" LineHeight="6" FontFamily="Times New Roman">
+                                <Run FontWeight="Bold" Text="Umiejętności:"/><LineBreak/>
+                                <Run x:Name="UMtxt" /><LineBreak/>
+                                <Run FontWeight="Bold" Text="Zdolności:"/><LineBreak/>
+                                <Run x:Name="ZDtxt" /><LineBreak/>
+                                <Run FontWeight="Bold" Text="Ekwipunek:"/><LineBreak/>
+                                <Run x:Name="EQtxt"/><LineBreak/>
+                                <Run FontWeight="Bold" Text="Profesje wyjściowe:"/><LineBreak/>
+                                <Run x:Name="Nexttxt" />
+                        </TextBlock>
+
+                    </Border>
+                </Grid>
+
+            </Grid>
+
+
+
+
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.1*"/>
+                <ColumnDefinition Width=".5*"/>
+                <ColumnDefinition Width=".5*"/>
+                <ColumnDefinition Width="0.1*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Grid Grid.Column="1">
+                <Button x:Name="saveAndExitButton" Content="Zapisz i wyjdź" Width="175" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="24" Height="52" BorderBrush="Black" BorderThickness="4" Style="{DynamicResource SnEButtonStyle}" Margin="0,0,10,0" Click="saveAndExitButton_Click">
+                    <Button.Background>
+                        <SolidColorBrush Color="#FFB9B7B7" Opacity="0.75"/>
+                    </Button.Background>
+                </Button>
+
+            </Grid>
+            <Grid Grid.Column="2">
+                <Button x:Name="ExitButton" Content="Wyjdź" Width="175" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="24" Height="52" BorderBrush="Black" BorderThickness="4" Style="{DynamicResource EButtonStyle}" Margin="10,0,0,0" Click="ExitButton_Click">
+                    <Button.Background>
+                        <SolidColorBrush Color="#FFB9B7B7" Opacity="0.75"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+
+
+        </Grid>
+
+
 
     </Grid>
+    </ScrollViewer>
 </Page>

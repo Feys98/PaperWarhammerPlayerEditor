@@ -14,8 +14,8 @@ namespace WHeditor
         public static int[] Attributes { get; set; } = new int[16];
         public static List<string> Abilites { get; private set; } = new List<string>();
         public static List<string> Skills { get; private set; } = new List<string>();
-
-
+        public static List<string> EQ { get; private set; } = new List<string>();
+        public static List<string> NextProf{ get; private set; } = new List<string>();
 
         public static void SetRaceID(int value)
         {
@@ -48,6 +48,20 @@ namespace WHeditor
             for (int i = 0; i < s.Length; i++)
             {
                 Skills.Add(s[i]);
+            }
+        }
+        public static void SetEQ(string[] s)
+        {
+            for (int i = 0; i < s.Length; i++)
+            {
+                EQ.Add(s[i]);
+            }
+        }
+        public static void SetNextProf(string[] s)
+        {
+            for (int i = 0; i < s.Length; i++)
+            {
+                NextProf.Add(s[i]);
             }
         }
     }

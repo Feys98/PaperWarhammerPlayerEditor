@@ -23,13 +23,76 @@ namespace WHeditor
         public SummaryPage()
         {
             InitializeComponent();
-            string s = "";
+            rasaName.Text = DataBaseReader.GetRaseName(Player.RaseID);
+            profName.Text = DataBaseReader.GetProfessionName(Player.ProffesionID);
+            string help1 = "";
             foreach (var x in Player.Abilites)
             {
-                s += $"{x}; ";
+                help1 += $"{x}, ";
             }
-            test.Text = s;
+            UMtxt.Text = help1;
+            string help2 = "";
+            foreach (var x in Player.Skills)
+            {
+                help2 += $"{x}, ";
+            }
+            ZDtxt.Text = help2;
+            string help3 = "";
+            foreach (var x in Player.EQ)
+            {
+                help3 += $"{x}, ";
+            }
+            EQtxt.Text = help3;
+            string help4 = "";
+            foreach (var x in Player.NextProf)
+            {
+                help4 += $"{x}, ";
+            }
+            Nexttxt.Text = help4;
+            DisplayAtributes(Player.Attributes);
+            ProfessionImage.Source = new BitmapImage(new Uri($"../Images/Professions/ProfessionIMG{Player.ProffesionID}.png", UriKind.Relative));
 
+        }
+
+        private void DisplayAtributes(int[] t)
+        {
+            WWValue.Content = t[0];
+            USValue.Content = t[1];
+            KValue.Content = t[2];
+            OdpValue.Content = t[3];
+            ZrValue.Content = t[4];
+            IntValue.Content = t[5];
+            SWValue.Content = t[6];
+            OgdValue.Content = t[7];
+            AValue.Content = t[8];
+            ZywValue.Content = t[9];
+            SValue.Content = t[10];
+            WtValue.Content = t[11];
+            SzValue.Content = t[12];
+            MagValue.Content = t[13];
+            POValue.Content = t[14];
+            PPValue.Content = t[15];
+
+        }
+
+        private void saveAndExitButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            ExitButton.Visibility = Visibility.Hidden;
+            saveAndExitButton.Visibility = Visibility.Hidden;
+
+            System.IO.Directory.CreateDirectory(@"\\Save");
+
+            UIElement element = scrollViewer.Content as UIElement;
+            Uri path = new Uri(@"\\Save\scr1.png");
+
+            ScreenShot.CaptureScreen(element, path);
+            App.Current.Shutdown();
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Shutdown();
         }
     }
 }

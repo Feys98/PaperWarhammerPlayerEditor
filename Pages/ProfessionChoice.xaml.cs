@@ -204,12 +204,45 @@ namespace WHeditor
         }
 
 
+        private void IfButtonThen(string[] s)
+        {
+            //UMtxt.Text = s[0];
+            //ZDtxt.Text = s[1];
+            //EQtxt.Text = s[2];
+            //Nexttxt.Text = s[3];
 
+            string[] s1, s2, s3, s4;
+
+            s1 = StringReader.Convert(s[0]);
+            s2 = StringReader.Convert(s[1]);
+            s3 = StringReader.Convert(s[2]);
+            s4 = StringReader.Convert(s[3]);
+            Player.SetAbilites (s1);
+            Player.SetSkills (s2);
+            Player.SetEQ (s3);
+            Player.SetNextProf (s4);
+        }
         private void ProfessionChoiceButtonNextPage_Click(object sender, RoutedEventArgs e)
         {
             if (button!= 0)
             {
-                Player.SetRaceID(professionID);
+                switch (button)
+                {
+                    case 1:
+                        IfButtonThen(ProfLeft1);
+                        Player.SetProffesionID(profesionID1);
+                        break;
+                    case 2:
+                        IfButtonThen(ProfLeft2);
+                        Player.SetProffesionID(profesionID2);
+                        break;
+                    case 3:
+                        IfButtonThen(ProfLeft3);
+                        Player.SetProffesionID(profesionID3);
+                        break;
+                    default:
+                        break;
+                }
                 NavigationService.Navigate(new SummaryPage());
             }
         }
